@@ -5,31 +5,33 @@
 </p>
 
 <p align="center">
-  <strong>Studio di Montaggio Video AI 100% On-Device per Android</strong><br>
+  <strong>Studio di Montaggio Video AI 100% On-Device per Android, Ubuntu e Windows</strong><br>
   <em>Crea Reel sportivi ad alto impatto sincronizzati al millisecondo sul beat musicale reale.</em>
 </p>
 
 <p align="center">
   <a href="https://github.com/NewtonH725/OrangeBeat/releases/latest">
-    <img src="https://img.shields.io/badge/Release-v2.4.0-FF5E00?style=for-the-badge&logo=android&logoColor=white" alt="Latest Release" />
+    <img src="https://img.shields.io/badge/Release-v3.0.0-FF5E00?style=for-the-badge&logo=github&logoColor=white" alt="Latest Release" />
   </a>
-  <a href="./docs/OrangeBeat-Guida-Completa.pdf">
-    <img src="https://img.shields.io/badge/Manuale%20PDF-Guida%20Completa-2563EB?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Manuale PDF" />
-  </a>
-  <img src="https://img.shields.io/badge/Android-SDK%2035%20--%2037-10B981?style=for-the-badge&logo=android" alt="Target Android" />
+  <img src="https://img.shields.io/badge/Android-SDK%2035%20--%2037-10B981?style=for-the-badge&logo=android&logoColor=white" alt="Target Android" />
+  <img src="https://img.shields.io/badge/Ubuntu-Linux%20x64-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" alt="Target Ubuntu" />
+  <img src="https://img.shields.io/badge/Windows-10%20%2F%2011%20x64-0078D4?style=for-the-badge&logo=windows&logoColor=white" alt="Target Windows" />
   <img src="https://img.shields.io/badge/Kotlin-2.2.10-7F52FF?style=for-the-badge&logo=kotlin" alt="Kotlin" />
   <img src="https://img.shields.io/badge/Architettura-100%25%20On--Device-black?style=for-the-badge" alt="On-Device" />
 </p>
 
 ---
 
-## 📥 Risorse & Download Rapido
+## 📥 Risorse & Download Rapido (`v3.0.0`)
 
+Tutti i pacchetti eseguibili contengono il numero di versione nel nome e supportano l'**aggiornamento automatico OTA** da GitHub Releases:
+
+* 📱 **Android (`.apk`):** `OrangeBeat-vX.Y.Z-android.apk` — [Scarica Ultima Release](https://github.com/NewtonH725/OrangeBeat/releases/latest)
+* 🐧 **Ubuntu / Linux (`.deb`):** `OrangeBeat-vX.Y.Z-ubuntu-amd64.deb` *(richiede `ffmpeg`)* — [Scarica Ultima Release](https://github.com/NewtonH725/OrangeBeat/releases/latest)
+* 🪟 **Windows (`.msi`):** `OrangeBeat-vX.Y.Z-windows-x64.msi` *(richiede `ffmpeg` nel `PATH`)* — [Scarica Ultima Release](https://github.com/NewtonH725/OrangeBeat/releases/latest)
 * 📄 **Guida Tecnica Ufficiale (PDF Completo, 14 pagine illustrate):**  
   * [Visualizza / Scarica PDF dal Repository (`./docs/OrangeBeat-Guida-Completa.pdf`)](./docs/OrangeBeat-Guida-Completa.pdf)  
   * [Download Diretto Raw GitHub (`OrangeBeat-Guida-Completa.pdf`)](https://github.com/NewtonH725/OrangeBeat/raw/main/docs/OrangeBeat-Guida-Completa.pdf)
-* 🚀 **Download Ultimo APK Rilasciato (OTA Ready):**  
-  * [GitHub Releases — OrangeBeat Latest APK](https://github.com/NewtonH725/OrangeBeat/releases/latest)
 
 ---
 
@@ -45,7 +47,15 @@
   * `PoseActionFinder.kt`: Tracciamento scheletrico tramite Google ML Kit Pose Detection a 480×270 pixel per identificare salti, squat, jerk ed estensioni pliometriche ($\Delta Y / \Delta t$).
 * **Regia Deterministica a 5 Fasi (`AiDirector.kt`):** Scomposizione ritmica in `INTRO`, `BUILDUP`, `DROP`, `BREAKDOWN` e `CLIMAX`. Sincronizzazione millimetrica dei tagli sui beat e applicazione di Speed Ramping (0.8x slow-motion e 1.25x fast-forward).
 * **Pipeline Hardware AndroidX Media3 Transformer (`VideoEditor.kt`):** Presentation scaling first, matrici cromatiche $4 \times 4$ `RgbMatrix`, zoom dinamico `KenBurnsMatrix`, shaders GLSL personalizzati (Old Film, TV Glitch CRT con aberrazione cromatica, Flash reattivo) e controllo DSP audio (`VolumeAudioProcessor.kt` con fade-in 500ms e fade-out 1500ms).
-* **Auto-Aggiornamento Integrato OTA (`AppUpdater.kt`):** Ispezione silente all'avvio da GitHub Releases API, download atomico verificato (> 5 MB) e popup di installazione assistita tramite `FileProvider`.
+* **Auto-Aggiornamento Integrato OTA (`AppUpdater.kt` / `DesktopAppUpdater.kt`):** Ispezione silente all'avvio da GitHub Releases API su tutte e tre le piattaforme, download atomico del pacchetto versionato (`.apk` su Android, `.deb` su Ubuntu, `.msi` su Windows) e installazione assistita.
+
+---
+
+## 🧩 Struttura Multi-Piattaforma
+
+* **`:shared`**: Core comune Kotlin (`AiDirectorCore`, `BeatDspCore`, `MotionSadCore`, `ColorPreset`, `VfxPreset`, `OutputOrientation`, `ReleaseUpdaterCore`).
+* **`:app` (Android)**: Jetpack Compose Material 3, Media3 Transformer, ML Kit Pose Detection, OpenGL ES 2.0 Shaders, `MediaCodec`.
+* **`:desktop` (Ubuntu & Windows)**: Compose Multiplatform (JVM), analisi e rendering `FFmpeg` / `FFprobe` 100% offline, pacchettizzazione nativa `.deb` e `.msi`.
 
 ---
 
@@ -165,18 +175,17 @@
 
 ### Build da Riga di Comando
 ```bash
-# 1. Compila la build Debug
-./gradlew assembleDebug
+# 1. Android (Debug APK)
+./gradlew :app:assembleDebug
 
-# Output: app/build/outputs/apk/debug/app-debug.apk
+# 2. Avvia la versione Desktop in locale (Ubuntu / Windows)
+./gradlew :desktop:run
 
-# 2. Compila la build Release ottimizzata
-./gradlew assembleRelease
+# 3. Pacchetto Ubuntu (.deb) — richiede JDK 17/21 con jpackage
+./gradlew :desktop:packageDeb
 
-# Output: app/build/outputs/apk/release/app-release.apk
-
-# 3. Installa sul dispositivo collegato via adb
-adb install -r app/build/outputs/apk/debug/app-debug.apk
+# 4. Installer Windows (.msi) — su Windows, richiede JDK 17/21 con jpackage
+.\gradlew.bat :desktop:packageMsi
 ```
 
 ---
