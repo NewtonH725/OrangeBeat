@@ -27,8 +27,12 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
 
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
+      - name: Accept Android SDK licenses
+        run: |
+          SDKMANAGER=$(find "$ANDROID_HOME/cmdline-tools" -name sdkmanager -type f | head -n 1)
+          if [ -n "$SDKMANAGER" ]; then
+            yes | "$SDKMANAGER" --licenses > /dev/null || true
+          fi
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
@@ -44,7 +48,7 @@ jobs:
           echo "tag=${TAG}" >> "$GITHUB_OUTPUT"
 
       - name: Build Android APK
-        run: ./gradlew :app:assembleRelease --no-daemon
+        run: ./gradlew :app:assembleDebug --no-daemon
 
       - name: Build Ubuntu .deb package
         run: ./gradlew :desktop:packageDeb --no-daemon
@@ -54,7 +58,7 @@ jobs:
           TAG="${{ steps.version.outputs.tag }}"
           mkdir -p release-artifacts
 
-          APK_PATH=$(find app/build/outputs/apk/release -name "*.apk" | head -n 1)
+          APK_PATH=$(find app/build/outputs/apk/debug -name "*.apk" | head -n 1)
           cp "$APK_PATH" "release-artifacts/OrangeBeat-${TAG}-android.apk"
 
           DEB_PATH=$(find desktop/build/compose/binaries/main/deb -name "*.deb" | head -n 1)
