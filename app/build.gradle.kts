@@ -11,18 +11,22 @@ android {
     // - X (versionMajor): Incrementa (+1, azzerando Y e Z) SOLO per introduzione di nuove funzionalità.
     // - Y (versionMinor): Incrementa (+1, azzerando Z) per upgrade sostanziosi e miglioramenti importanti.
     // - Z (versionPatch): Incrementa (+1) solo per bug fix, correzioni e upgrade minori.
-    val versionMajor = 2 // Incrementa SOLO per introduzione di nuove funzionalità (v2.0.0 Cloud Audio)
-    val versionMinor = 4 // Incrementa per upgrade sostanziosi e più importanti (v2.4.0 SmartAudioDirector + OTA Auto-Update)
+    val versionMajor = 3 // Incrementa SOLO per introduzione di nuove funzionalità (v3.0.0 Desktop Ubuntu & Windows + Multi-Platform OTA)
+    val versionMinor = 0 // Incrementa per upgrade sostanziosi e più importanti
     val versionPatch = 0 // Incrementa per bug fix e upgrade minori
 
     defaultConfig {
         applicationId = "com.example.crossreel"
         minSdk = 35
         targetSdk = 37
-        versionCode = versionMajor * 10000 + versionMinor * 100 + versionPatch // 20400 per v2.4.0
-        versionName = "v$versionMajor.$versionMinor.$versionPatch" // "v2.4.0"
+        versionCode = versionMajor * 10000 + versionMinor * 100 + versionPatch // 30000 per v3.0.0
+        versionName = "v$versionMajor.$versionMinor.$versionPatch" // "v3.0.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    base {
+        archivesName.set("OrangeBeat-v$versionMajor.$versionMinor.$versionPatch-android")
     }
 
     buildTypes {
@@ -42,6 +46,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":shared"))
     implementation(platform(libs.androidx.compose.bom))
 
     implementation(libs.androidx.activity.compose)

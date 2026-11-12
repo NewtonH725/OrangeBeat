@@ -32,7 +32,7 @@ class RealBeatDetector {
                 deferred.complete(result)
             } catch (e: Exception) {
                 Log.w(TAG, "Decodifica fallita, uso fallback", e)
-                deferred.complete(generateRegularBeats(defaultBpm, targetDurationMs))
+                deferred.complete(BeatDspCore.generateRegularBeats(defaultBpm, targetDurationMs))
             }
         }
         decoderThread.name = "BeatDetector-Worker"
@@ -49,7 +49,7 @@ class RealBeatDetector {
         } else {
             Log.w(TAG, "Beat detection timeout, uso fallback matematico")
             deferred.cancel()
-            return@withContext generateRegularBeats(defaultBpm, targetDurationMs)
+            return@withContext BeatDspCore.generateRegularBeats(defaultBpm, targetDurationMs)
         }
     }
 
@@ -83,7 +83,7 @@ class RealBeatDetector {
 
         if (audioTrackIndex < 0 || format == null) {
             extractor.release()
-            return generateRegularBeats(defaultBpm, targetDurationMs)
+            return BeatDspCore.generateRegularBeats(defaultBpm, targetDurationMs)
         }
 
         if (format.containsKey(MediaFormat.KEY_DURATION)) {
@@ -101,7 +101,7 @@ class RealBeatDetector {
         val mime = format.getString(MediaFormat.KEY_MIME)
             ?: run {
                 extractor.release()
-                return generateRegularBeats(defaultBpm, audioDurationMs)
+                return BeatDspCore.generateRegularBeats(defaultBpm, audioDurationMs)
             }
 
         val codec = MediaCodec.createDecoderByType(mime)
@@ -115,7 +115,7 @@ class RealBeatDetector {
         val bytesPerWindow = samplesPerWindow * channelCount * 2 // 16-bit PCM = 2 bytes per canale
         if (bytesPerWindow <= 0) {
             codec.stop(); codec.release(); extractor.release()
-            return generateRegularBeats(defaultBpm, audioDurationMs)
+            return BeatDspCore.generateRegularBeats(defaultBpm, audioDurationMs)
         }
 
         // Filtro passa-basso digitale a 1 polo (~160 Hz) per isolare la cassa (kick drum) ed eliminare piatti/voci
@@ -215,80 +215,11 @@ class RealBeatDetector {
             try { extractor.release() } catch (_: Exception) {}
         }
 
-        // Rilevamento picchi con media mobile locale e ricerca dei massimi locali
-        val beats = mutableListOf<Long>()
-        val windowSize = 20 // 1 secondo (20 finestre da 50ms)
-        var sum = 0.0
-
-        for (i in energies.indices) {
-            sum += energies[i]
-            if (i >= windowSize) sum -= energies[i - windowSize]
-
-            val count = if (i + 1 < windowSize) i + 1 else windowSize
-            val avg = sum / count
-
-            // Un battito è un vero massimo locale (non solo il superamento iniziale della soglia)
-            val isLocalMax = (i == 0 || energies[i] >= energies[i - 1]) &&
-                             (i == energies.size - 1 || energies[i] >= energies[i + 1])
-
-            if (isLocalMax && energies[i] > avg * 1.35 && (beats.isEmpty() || timestamps[i] - beats.last() >= 250)) {
-                beats.add(timestamps[i])
-            }
-        }
-
-        // Calcolo dell'intervallo reale (BPM effettivo) della traccia
-        val intervals = mutableListOf<Long>()
-        for (b in 1 until beats.size) {
-            val diff = beats[b] - beats[b - 1]
-            if (diff in 250..1200) { // tra 50 BPM e 240 BPM
-                intervals.add(diff)
-            }
-        }
-
-        val measuredIntervalMs: Long = if (intervals.isNotEmpty()) {
-            intervals.sorted()[intervals.size / 2] // Mediana
-        } else {
-            (60000.0 / defaultBpm).toLong()
-        }
-
-        val rawBeats = if (beats.isNotEmpty()) beats else generateRegularBeats(60000.0 / measuredIntervalMs, targetDurationMs)
-
-        // GAP FILLER basato sul ritmo REALE della traccia:
-        // Riempiamo i silenzi o i breakdown preservando la cadenza musicale corretta
-        val intervalMs = measuredIntervalMs
-        val filledBeats = mutableListOf<Long>()
-        var expectedNext = 0L
-
-        for (beat in rawBeats) {
-            while (expectedNext + (intervalMs * 1.4).toLong() < beat) {
-                filledBeats.add(expectedNext)
-                expectedNext += intervalMs
-            }
-            filledBeats.add(beat)
-            expectedNext = beat + intervalMs
-        }
-
-        // PAD FINALE con il ritmo esatto fino alla fine della timeline
-        var current = if (filledBeats.isNotEmpty()) filledBeats.last() else 0L
-        while (current < targetDurationMs) {
-            current += intervalMs
-            filledBeats.add(current)
-        }
-
-        return filledBeats
-    }
-
-    private fun generateRegularBeats(bpm: Double, durationMs: Long): List<Long> {
-        val beats = mutableListOf<Long>()
-        if (bpm <= 0) return listOf(0L)
-
-        val intervalMs = (60000.0 / bpm).toLong()
-        var current = 0L
-
-        while (current < durationMs && beats.size < 10000) {
-            beats.add(current)
-            current += intervalMs
-        }
-        return beats
+        return BeatDspCore.detectBeatsFromRmsWindows(
+            energies = energies,
+            timestamps = timestamps,
+            targetDurationMs = targetDurationMs,
+            defaultBpm = defaultBpm
+        )
     }
 }

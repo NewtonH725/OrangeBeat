@@ -1,9 +1,7 @@
 package com.example.crossreel
 
-import androidx.compose.runtime.Immutable
-
 /**
- * Orientamento e risoluzione del video finale esportato dalla pipeline Media3 Transformer.
+ * Orientamento e risoluzione del video finale esportato.
  */
 enum class OutputOrientation(
     val displayName: String,
@@ -27,7 +25,6 @@ enum class OutputOrientation(
 /**
  * Modello dati immutabile per il riepilogo in tempo reale delle specifiche tecniche di output.
  */
-@Immutable
 data class OutputVideoSpecs(
     val resolutionLabel: String,
     val formatBadge: String,

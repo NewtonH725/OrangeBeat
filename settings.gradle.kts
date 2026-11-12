@@ -24,4 +24,6 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "CrossReel"
+include(":shared")
 include(":app")
+include(":desktop")
