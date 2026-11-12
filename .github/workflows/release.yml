@@ -93,16 +93,16 @@ jobs:
           fi
           echo "tag=${TAG}" >> "$GITHUB_OUTPUT"
 
-      - name: Build Windows .msi installer
-        run: .\gradlew.bat :desktop:packageMsi --no-daemon
+      - name: Build Windows .exe installer
+        run: .\gradlew.bat :desktop:packageExe --no-daemon
 
       - name: Rename Windows artifact with app version
         shell: bash
         run: |
           TAG="${{ steps.version.outputs.tag }}"
           mkdir -p release-artifacts
-          MSI_PATH=$(find desktop/build/compose/binaries/main/msi -name "*.msi" | head -n 1)
-          cp "$MSI_PATH" "release-artifacts/OrangeBeat-${TAG}-windows-x64.msi"
+          EXE_PATH=$(find desktop/build/compose/binaries/main/exe -name "*.exe" | head -n 1)
+          cp "$EXE_PATH" "release-artifacts/OrangeBeat-${TAG}-windows-x64.exe"
 
       - name: Upload Windows artifact
         uses: actions/upload-artifact@v4

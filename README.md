@@ -28,7 +28,7 @@ Tutti i pacchetti eseguibili contengono il numero di versione nel nome e support
 
 * 📱 **Android (`.apk`):** `OrangeBeat-vX.Y.Z-android.apk` — [Scarica Ultima Release](https://github.com/NewtonH725/OrangeBeat/releases/latest)
 * 🐧 **Ubuntu / Linux (`.deb`):** `OrangeBeat-vX.Y.Z-ubuntu-amd64.deb` *(richiede `ffmpeg`)* — [Scarica Ultima Release](https://github.com/NewtonH725/OrangeBeat/releases/latest)
-* 🪟 **Windows (`.msi`):** `OrangeBeat-vX.Y.Z-windows-x64.msi` *(richiede `ffmpeg` nel `PATH`)* — [Scarica Ultima Release](https://github.com/NewtonH725/OrangeBeat/releases/latest)
+* 🪟 **Windows (`.exe`):** `OrangeBeat-vX.Y.Z-windows-x64.exe` *(richiede `ffmpeg` nel `PATH`)* — [Scarica Ultima Release](https://github.com/NewtonH725/OrangeBeat/releases/latest)
 * 📄 **Guida Tecnica Ufficiale (PDF Completo, 14 pagine illustrate):**  
   * [Visualizza / Scarica PDF dal Repository (`./docs/OrangeBeat-Guida-Completa.pdf`)](./docs/OrangeBeat-Guida-Completa.pdf)  
   * [Download Diretto Raw GitHub (`OrangeBeat-Guida-Completa.pdf`)](https://github.com/NewtonH725/OrangeBeat/raw/main/docs/OrangeBeat-Guida-Completa.pdf)
@@ -47,7 +47,7 @@ Tutti i pacchetti eseguibili contengono il numero di versione nel nome e support
   * `PoseActionFinder.kt`: Tracciamento scheletrico tramite Google ML Kit Pose Detection a 480×270 pixel per identificare salti, squat, jerk ed estensioni pliometriche ($\Delta Y / \Delta t$).
 * **Regia Deterministica a 5 Fasi (`AiDirector.kt`):** Scomposizione ritmica in `INTRO`, `BUILDUP`, `DROP`, `BREAKDOWN` e `CLIMAX`. Sincronizzazione millimetrica dei tagli sui beat e applicazione di Speed Ramping (0.8x slow-motion e 1.25x fast-forward).
 * **Pipeline Hardware AndroidX Media3 Transformer (`VideoEditor.kt`):** Presentation scaling first, matrici cromatiche $4 \times 4$ `RgbMatrix`, zoom dinamico `KenBurnsMatrix`, shaders GLSL personalizzati (Old Film, TV Glitch CRT con aberrazione cromatica, Flash reattivo) e controllo DSP audio (`VolumeAudioProcessor.kt` con fade-in 500ms e fade-out 1500ms).
-* **Auto-Aggiornamento Integrato OTA (`AppUpdater.kt` / `DesktopAppUpdater.kt`):** Ispezione silente all'avvio da GitHub Releases API su tutte e tre le piattaforme, download atomico del pacchetto versionato (`.apk` su Android, `.deb` su Ubuntu, `.msi` su Windows) e installazione assistita.
+* **Auto-Aggiornamento Integrato OTA (`AppUpdater.kt` / `DesktopAppUpdater.kt`):** Ispezione silente all'avvio da GitHub Releases API su tutte e tre le piattaforme, download atomico del pacchetto versionato (`.apk` su Android, `.deb` su Ubuntu, `.exe` su Windows) e installazione assistita.
 
 ---
 
@@ -55,7 +55,7 @@ Tutti i pacchetti eseguibili contengono il numero di versione nel nome e support
 
 * **`:shared`**: Core comune Kotlin (`AiDirectorCore`, `BeatDspCore`, `MotionSadCore`, `ColorPreset`, `VfxPreset`, `OutputOrientation`, `ReleaseUpdaterCore`).
 * **`:app` (Android)**: Jetpack Compose Material 3, Media3 Transformer, ML Kit Pose Detection, OpenGL ES 2.0 Shaders, `MediaCodec`.
-* **`:desktop` (Ubuntu & Windows)**: Compose Multiplatform (JVM), analisi e rendering `FFmpeg` / `FFprobe` 100% offline, pacchettizzazione nativa `.deb` e `.msi`.
+* **`:desktop` (Ubuntu & Windows)**: Compose Multiplatform (JVM), analisi e rendering `FFmpeg` / `FFprobe` 100% offline, pacchettizzazione nativa `.deb` e `.exe`.
 
 ---
 
@@ -184,8 +184,8 @@ Tutti i pacchetti eseguibili contengono il numero di versione nel nome e support
 # 3. Pacchetto Ubuntu (.deb) — richiede JDK 17/21 con jpackage
 ./gradlew :desktop:packageDeb
 
-# 4. Installer Windows (.msi) — su Windows, richiede JDK 17/21 con jpackage
-.\gradlew.bat :desktop:packageMsi
+# 4. Installer Windows (.exe) — su Windows, richiede JDK 17/21 con jpackage
+.\gradlew.bat :desktop:packageExe
 ```
 
 ---

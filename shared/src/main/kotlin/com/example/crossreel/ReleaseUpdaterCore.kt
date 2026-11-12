@@ -12,7 +12,7 @@ enum class TargetPlatform(
 ) {
     ANDROID("android", listOf(".apk")),
     UBUNTU("ubuntu", listOf(".deb", ".appimage")),
-    WINDOWS("windows", listOf(".msi", ".exe"))
+    WINDOWS("windows", listOf(".exe", ".msi"))
 }
 
 data class GitHubReleaseAsset(
