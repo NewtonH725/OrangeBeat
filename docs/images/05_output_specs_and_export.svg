@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 320" width="360" height="320">
+  <rect width="360" height="320" rx="24" fill="#0F0E0D" stroke="#3A3633" stroke-width="2"/>
+
+  <!-- OutputSpecsSummaryCard -->
+  <rect x="18" y="18" width="324" height="118" rx="24" fill="#2C2926" stroke="#3A3633" stroke-width="1"/>
+  <circle cx="38" cy="40" r="4" fill="#FC6000"/>
+  <text x="50" y="44" fill="#C7BFB7" font-family="sans-serif" font-size="10" font-weight="bold" letter-spacing="1">SPECIFICHE OUTPUT FINALE</text>
+  <rect x="268" y="29" width="58" height="20" rx="8" fill="#3D1600"/>
+  <text x="297" y="43" text-anchor="middle" fill="#FC6000" font-family="monospace" font-size="10" font-weight="900">9:16 FHD</text>
+
+  <!-- Pill 1: Risoluzione -->
+  <rect x="32" y="58" width="94" height="62" rx="16" fill="#181716" stroke="#3A3633" stroke-width="1"/>
+  <text x="79" y="75" text-anchor="middle" fill="#C7BFB7" font-family="sans-serif" font-size="9">Risoluzione</text>
+  <text x="79" y="95" text-anchor="middle" fill="#FFFFFF" font-family="monospace" font-size="13" font-weight="900">1080×1920</text>
+  <text x="79" y="110" text-anchor="middle" fill="#FC6000" font-family="monospace" font-size="9" font-weight="bold">px</text>
+
+  <!-- Pill 2: Frame Rate -->
+  <rect x="133" y="58" width="94" height="62" rx="16" fill="#181716" stroke="#3A3633" stroke-width="1"/>
+  <text x="180" y="75" text-anchor="middle" fill="#C7BFB7" font-family="sans-serif" font-size="9">Frame Rate</text>
+  <text x="180" y="95" text-anchor="middle" fill="#FFFFFF" font-family="monospace" font-size="13" font-weight="900">60 FPS</text>
+  <text x="180" y="110" text-anchor="middle" fill="#FC6000" font-family="monospace" font-size="9" font-weight="bold">Costante</text>
+
+  <!-- Pill 3: Profondita Colore -->
+  <rect x="234" y="58" width="94" height="62" rx="16" fill="#181716" stroke="#3A3633" stroke-width="1"/>
+  <text x="281" y="75" text-anchor="middle" fill="#C7BFB7" font-family="sans-serif" font-size="9">Profondità Colore</text>
+  <text x="281" y="95" text-anchor="middle" fill="#FFFFFF" font-family="monospace" font-size="13" font-weight="900">8-bit SDR</text>
+  <text x="281" y="110" text-anchor="middle" fill="#FC6000" font-family="monospace" font-size="9" font-weight="bold">Rec.709</text>
+
+  <!-- CTA Button CREA REEL -->
+  <rect x="18" y="150" width="324" height="64" rx="32" fill="#FC6000"/>
+  <text x="180" y="189" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="18" font-weight="900" letter-spacing="2">CREA REEL</text>
+
+  <!-- Completed Video Card -->
+  <rect x="18" y="232" width="324" height="62" rx="24" fill="#3D1600" stroke="#FC6000" stroke-width="1.5"/>
+  <polygon points="52,252 52,274 70,263" fill="#FC6000"/>
+  <text x="192" y="267" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="11" font-weight="900" letter-spacing="1">REEL PRONTO! TOCCA QUI PER GUARDARLO</text>
+</svg>

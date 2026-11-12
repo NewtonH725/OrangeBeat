@@ -1,0 +1,2044 @@
+%PDF-1.4
+% Orange-Beat v1.0.0 - Complete Technical Snapshot & Illustrated User Manual
+
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+
+2 0 obj
+<< /Type /Pages /Kids [10 0 R 12 0 R 14 0 R 16 0 R 18 0 R 20 0 R 22 0 R 24 0 R 26 0 R] /Count 9 >>
+endobj
+
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier-Bold /Encoding /WinAnsiEncoding >>
+endobj
+
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Bold /Encoding /WinAnsiEncoding >>
+endobj
+
+7 0 obj
+<< /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> /XObject << /ImLogo 8 0 R >> >>
+endobj
+
+8 0 obj
+<<
+  /Type /XObject
+  /Subtype /Image
+  /Width 8
+  /Height 8
+  /ColorSpace /DeviceRGB
+  /BitsPerComponent 8
+  /Filter /ASCIIHexDecode
+  /Length 398
+>>
+stream
+000000 000000 3D1600 FC6000 FC6000 3D1600 000000 000000
+000000 3D1600 FC6000 FFB74D FFB74D FC6000 3D1600 000000
+3D1600 FC6000 FFFFFF FFB74D FC6000 FFFFFF FC6000 3D1600
+FC6000 FFB74D FFFFFF FC6000 FC6000 FFFFFF FFB74D FC6000
+FC6000 FFB74D FFFFFF FC6000 FC6000 FFFFFF FFB74D FC6000
+3D1600 FC6000 FFFFFF FFB74D FC6000 FFFFFF FC6000 3D1600
+000000 3D1600 FC6000 FFB74D FFB74D FC6000 3D1600 000000
+000000 000000 3D1600 FC6000 FC6000 3D1600 000000 000000>
+endstream
+endobj
+
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources 7 0 R /Contents 11 0 R >>
+endobj
+
+11 0 obj
+<< /Length 4980 >>
+stream
+% PAGE 1: COVER & ARCHITECTURAL OVERVIEW (v1.0.0)
+0.059 0.055 0.051 rg
+0 0 595 842 re f
+
+% Top Flame Orange Accent Bar
+0.988 0.376 0.000 rg
+0 830 595 12 re f
+
+% Hero Header Card
+0.110 0.106 0.098 rg
+0.227 0.212 0.200 RG
+1.5 w
+32 650 531 152 re B
+
+% Draw Raster Logo XObject & Vector Soundwave Emblem
+q
+48 0 0 48 54 732 cm
+/ImLogo Do
+Q
+0.988 0.376 0.000 RG
+2.5 w
+52 730 52 52 re S
+
+% Title & Subtitle
+BT
+/F2 30 Tf
+1 1 1 rg
+122 762 Td
+(ORANGE) Tj
+0.988 0.376 0.000 rg
+134 0 Td
+(BEAT) Tj
+/F3 14 Tf
+1.000 0.718 0.302 rg
+98 0 Td
+(  [v1.0.0 - RELEASE BASE]) Tj
+ET
+
+BT
+/F2 13 Tf
+0.922 0.878 0.851 rg
+122 736 Td
+(SNAPSHOT TECNICO COMPLETO & MANUALE UTENTE ILLUSTRATO) Tj
+/F1 10 Tf
+0.780 0.749 0.718 rg
+0 -18 Td
+(AI Reel Studio 100% On-Device per Android  |  Namespace: com.example.crossreel) Tj
+0 -15 Td
+(Kotlin 2.2.10  |  Jetpack Compose M3 Expressive  |  AndroidX Media3 1.4.1  |  ML Kit Pose 17.0.0) Tj
+0 -15 Td
+(Zero Cloud  |  Zero API Key  |  Zero Latenza di Rete  |  Esportazione Duale 9:16 & 16:9 FHD) Tj
+ET
+
+% Section 1.1: Filosofia 100% On-Device & Offline
+0.110 0.106 0.098 rg
+0.227 0.212 0.200 RG
+1 w
+32 455 531 176 re B
+
+0.988 0.376 0.000 rg
+32 605 531 26 re f
+BT
+/F2 12 Tf
+1 1 1 rg
+46 614 Td
+(1. PANORAMICA & FILOSOFIA ARCHITETTURALE 100% ON-DEVICE (v1.0.0)) Tj
+ET
+
+BT
+/F2 10 Tf
+1.000 0.718 0.302 rg
+46 584 Td
+(Architettura Autonoma, Privata e Deterministica sul Dispositivo:) Tj
+/F1 9.5 Tf
+0.922 0.878 0.851 rg
+0 -16 Td
+(- Zero Dipendenze Cloud: Nessun video ne' frame viene caricato su server esterni; nessuna API key richiesta.) Tj
+0 -14 Td
+(- Prevenzione Sistematica OOM su Video 4K: Campionamento tramite getScaledFrameAtTime(OPTION_CLOSEST)) Tj
+0 -13 Td
+(  a 64x64 px per MotionAnalyzer (16 KB/frame) e 480x270 px per ML Kit PoseActionFinder (-95% RAM).) Tj
+0 -14 Td
+(- Zero Allocazioni nei Loop a 60/120 Hz: Pre-allocazione con remember di Paint, Brush, Stroke nei Canvas) Tj
+0 -13 Td
+(  UI (MixerKnobWithVuMeter, ExpressiveDurationSlider) e di Matrix/FloatArray negli effetti Media3.) Tj
+0 -14 Td
+(- Concorrenza Segregata Kotlin Coroutines: Dispatchers.Default per DSP Audio/ML Kit/Regia, Dispatchers.IO) Tj
+0 -13 Td
+(  per MediaMetadataRetriever e FileSystem, Dispatchers.Main per lo stato reattivo Jetpack Compose.) Tj
+0 -14 Td
+(- Supporto Dual-Orientation Nativo: Esportazione 1080x1920 (Portrait 9:16) e 1920x1080 (Landscape 16:9).) Tj
+ET
+
+% Section 1.2: Protocollo di Versionamento vX.Y.Z
+0.110 0.106 0.098 rg
+0.227 0.212 0.200 RG
+1 w
+32 255 531 182 re B
+
+0.239 0.086 0.000 rg
+32 411 531 26 re f
+BT
+/F2 12 Tf
+0.988 0.376 0.000 rg
+46 420 Td
+(2. PROTOCOLLO DI VERSIONAMENTO SEMANTICO UFFICIALE (vX.Y.Z)) Tj
+ET
+
+BT
+/F3 10 Tf
+1 1 1 rg
+46 390 Td
+(Formula Gradle: versionCode = versionMajor * 10000 + versionMinor * 100 + versionPatch) Tj
+/F1 9.5 Tf
+0.780 0.749 0.718 rg
+0 -15 Td
+(Release Base Attuale: versionMajor = 1, versionMinor = 0, versionPatch = 0  -->  v1.0.0 (versionCode = 10000)) Tj
+ET
+
+% Table for X, Y, Z rules
+0.173 0.161 0.149 rg
+46 346 503 20 re f
+BT
+/F2 9.5 Tf
+0.988 0.376 0.000 rg
+54 353 Td
+(SEGMENTO) Tj
+100 0 Td
+(VARIABILE) Tj
+110 0 Td
+(REGOLA DI INCREMENTO OBBLIGATORIA) Tj
+ET
+
+0.140 0.130 0.120 rg
+46 322 503 22 re f
+BT
+/F3 9 Tf
+1 1 1 rg
+54 330 Td
+(X (Major)) Tj
+100 0 Td
+(versionMajor) Tj
+/F1 9 Tf
+0.922 0.878 0.851 rg
+110 0 Td
+(+1 (azzerando Y=0, Z=0) SOLO per introduzione di nuove funzionalita'.) Tj
+ET
+
+0.110 0.106 0.098 rg
+46 298 503 22 re f
+BT
+/F3 9 Tf
+1 1 1 rg
+54 306 Td
+(Y (Minor)) Tj
+100 0 Td
+(versionMinor) Tj
+/F1 9 Tf
+0.922 0.878 0.851 rg
+110 0 Td
+(+1 (azzerando Z=0) per upgrade sostanziosi e miglioramenti importanti.) Tj
+ET
+
+0.140 0.130 0.120 rg
+46 274 503 22 re f
+BT
+/F3 9 Tf
+1 1 1 rg
+54 282 Td
+(Z (Patch)) Tj
+100 0 Td
+(versionPatch) Tj
+/F1 9 Tf
+0.922 0.878 0.851 rg
+110 0 Td
+(+1 solo per bug fix, correzioni e upgrade minori (es. v1.0.1 -> 10001).) Tj
+ET
+
+% Section 1.3: Mappa del Documento
+0.110 0.106 0.098 rg
+0.227 0.212 0.200 RG
+32 58 531 180 re B
+
+BT
+/F2 11 Tf
+0.988 0.376 0.000 rg
+46 218 Td
+(INDICE STRUTTURATO DELLO SNAPSHOT TECNICO & MANUALE UTENTE:) Tj
+/F1 9.5 Tf
+0.922 0.878 0.851 rg
+0 -18 Td
+(Pag. 2 - Manuale Utente: Schermata 1 (Splash Screen OLED #000000) & Schermata 2 (Orientamento + Clip)) Tj
+0 -15 Td
+(Pag. 3 - Manuale Utente: Schermata 3 (Strumento Analogico VU Meter Vintage & Fader Orizzontale da Mixer)) Tj
+0 -15 Td
+(Pag. 4 - Manuale Utente: Schermata 4 (Colonna Sonora 17 Tracce, 9 Preset Color Grading, 4 Preset VFX)) Tj
+0 -15 Td
+(Pag. 5 - Manuale Utente: Schermata 5 (Riquadro OutputSpecsSummaryCard, CTA Crea Reel & FileProvider)) Tj
+0 -15 Td
+(Pag. 6 - Stack Tecnologico Completo, Toolchain Android SDK 35/37 & Design System M3 Expressive Dark) Tj
+0 -15 Td
+(Pag. 7 - Algoritmi Matematici: RealBeatDetector (PCM 16-bit/LPF/RMS), MotionAnalyzer (SAD), PoseActionFinder) Tj
+0 -15 Td
+(Pag. 8 - Motore di Regia AiDirector: 5 Fasi Musicali, Ancoraggio ai Beat, Monte Carlo & Speed Ramping) Tj
+0 -15 Td
+(Pag. 9 - Pipeline Media3 Transformer: Presentation 9:16/16:9, RgbMatrix, KenBurns, GLSL Shaders & Audio) Tj
+ET
+
+% Footer
+BT
+/F3 8.5 Tf
+0.541 0.510 0.478 rg
+32 28 Td
+(ORANGE-BEAT v1.0.0  |  SNAPSHOT TECNICO & MANUALE UTENTE  |  PAGINA 1 DI 9) Tj
+ET
+endstream
+endobj
+
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources 7 0 R /Contents 13 0 R >>
+endobj
+
+13 0 obj
+<< /Length 5650 >>
+stream
+% PAGE 2: USER MANUAL - SCREEN 1 (SPLASH SCREEN) & SCREEN 2 (ORIENTATION + CLIPS)
+0.059 0.055 0.051 rg
+0 0 595 842 re f
+0.988 0.376 0.000 rg
+0 830 595 12 re f
+
+BT
+/F2 16 Tf
+1 1 1 rg
+32 798 Td
+(MANUALE UTENTE ILLUSTRATO - SCHERMATE 1 & 2) Tj
+/F1 10 Tf
+0.780 0.749 0.718 rg
+0 -16 Td
+(Avvio OLED Nero Puro, Scelta Primaria Orientamento (9:16 / 16:9) e Selezione Intelligente Clip) Tj
+ET
+
+% =========================================================================
+% LEFT MOCKUP: SCREEN 1 - SPLASH SCREEN (#000000 PURE BLACK)
+% =========================================================================
+0.000 0.000 0.000 rg
+0.227 0.212 0.200 RG
+2 w
+36 430 230 330 re B
+
+% Phone Speaker & Status Bar
+0.173 0.161 0.149 rg
+126 746 50 5 re f
+
+% Center Splash Logo Emblem inside Splash Screen
+0.094 0.035 0.000 rg
+0.988 0.376 0.000 RG
+2 w
+106 565 90 90 re B
+
+% Soundwave bars inside emblem
+0.988 0.376 0.000 rg
+122 595 6 30 re f
+1.000 0.718 0.302 rg
+134 582 6 56 re f
+1.000 1.000 1.000 rg
+146 574 6 72 re f
+0.988 0.376 0.000 rg
+158 588 6 44 re f
+170 596 6 28 re f
+
+% ORANGEBEAT Wordmark
+BT
+/F2 15 Tf
+1 1 1 rg
+93 535 Td
+(ORANGE) Tj
+0.988 0.376 0.000 rg
+68 0 Td
+(BEAT) Tj
+ET
+
+% Bottom Version Name
+BT
+/F3 10 Tf
+0.541 0.510 0.478 rg
+132 446 Td
+(v1.0.0) Tj
+ET
+
+% Label under Left Mockup
+BT
+/F2 10 Tf
+0.988 0.376 0.000 rg
+42 412 Td
+(FIG. 1 - SplashScreen() [Nero Puro #000000]) Tj
+ET
+
+% =========================================================================
+% RIGHT MOCKUP: SCREEN 2 - HEADER, SEZIONE 0 (ORIENTAMENTO) & SEZIONE 1 (CLIP)
+% =========================================================================
+0.059 0.055 0.051 rg
+0.227 0.212 0.200 RG
+2 w
+300 430 258 330 re B
+
+% Header inside Screen 2
+BT
+/F2 14 Tf
+1 1 1 rg
+316 730 Td
+(ORANGE) Tj
+0.988 0.376 0.000 rg
+62 0 Td
+(BEAT) Tj
+/F1 7.5 Tf
+0.541 0.510 0.478 rg
+-62 -11 Td
+(AI REEL STUDIO  -  ON-DEVICE) Tj
+ET
+
+% Version Badge in Header
+0.173 0.161 0.149 rg
+0.227 0.212 0.200 RG
+1 w
+498 722 46 20 re B
+BT
+/F3 8.5 Tf
+0.988 0.376 0.000 rg
+505 729 Td
+(v1.0.0) Tj
+ET
+
+% Card Sezione 0: ORIENTAMENTO OUTPUT
+0.110 0.106 0.098 rg
+0.227 0.212 0.200 RG
+1 w
+312 612 234 92 re B
+
+BT
+/F2 8.5 Tf
+0.780 0.749 0.718 rg
+324 686 Td
+(ORIENTAMENTO OUTPUT) Tj
+/F3 8 Tf
+0.988 0.376 0.000 rg
+126 0 Td
+(VERTICALE (9:16)) Tj
+ET
+
+% Chip 1: VERTICALE 9:16 (Selected Orange)
+0.988 0.376 0.000 rg
+324 626 104 38 re f
+BT
+/F2 8.5 Tf
+1 1 1 rg
+340 642 Td
+(VERTICALE 9:16) Tj
+ET
+
+% Chip 2: ORIZZONTALE 16:9 (Unselected Dark)
+0.173 0.161 0.149 rg
+0.227 0.212 0.200 RG
+334 626 0 0 re
+434 626 100 38 re B
+BT
+/F2 8 Tf
+0.922 0.878 0.851 rg
+442 642 Td
+(ORIZZONTALE 16:9) Tj
+ET
+
+% Card Sezione 1: CLIP VIDEO SORGENTE
+0.110 0.106 0.098 rg
+0.227 0.212 0.200 RG
+312 496 234 102 re B
+
+BT
+/F2 8.5 Tf
+0.780 0.749 0.718 rg
+324 578 Td
+(CLIP VIDEO SORGENTE) Tj
+ET
+
+% Badge "4 SELEZIONATE"
+0.239 0.086 0.000 rg
+460 572 74 18 re f
+BT
+/F3 7.5 Tf
+0.988 0.376 0.000 rg
+467 578 Td
+(4 SELEZIONATE) Tj
+ET
+
+% Button "MODIFICA SELEZIONE CLIP"
+0.173 0.161 0.149 rg
+324 510 210 42 re f
+BT
+/F2 9 Tf
+1 1 1 rg
+368 528 Td
+(MODIFICA SELEZIONE CLIP) Tj
+ET
+
+% Info Banner inside Screen 2
+0.094 0.090 0.086 rg
+0.988 0.376 0.000 RG
+312 442 234 40 re B
+BT
+/F2 7.5 Tf
+1.000 0.718 0.302 rg
+320 466 Td
+(Filtro Automatico Clip < 3s + Rilevamento FPS) Tj
+/F1 7.5 Tf
+0.780 0.749 0.718 rg
+0 -12 Td
+(MediaMetadataRetriever in Dispatchers.IO) Tj
+ET
+
+BT
+/F2 10 Tf
+0.988 0.376 0.000 rg
+304 412 Td
+(FIG. 2 - Sezione 0 (9:16 / 16:9) & Sezione 1 (Clip)) Tj
+ET
+
+% =========================================================================
+% DETAILED TECHNICAL EXPLANATION OF SCREENS 1 & 2
+% =========================================================================
+0.110 0.106 0.098 rg
+0.227 0.212 0.200 RG
+1 w
+32 56 531 340 re B
+
+0.988 0.376 0.000 rg
+32 370 531 26 re f
+BT
+/F2 11.5 Tf
+1 1 1 rg
+46 379 Td
+(DETTAGLIO FUNZIONALE & ARCHITETTURALE - SCHERMATE 1 & 2 (MainActivity.kt)) Tj
+ET
+
+BT
+/F2 10 Tf
+1.000 0.718 0.302 rg
+46 348 Td
+(1. SplashScreen() [Linee 65-141 di MainActivity.kt + res/values/themes.xml]:) Tj
+/F1 9.2 Tf
+0.922 0.878 0.851 rg
+0 -14 Td
+(- Mostrata all'avvio per 2000 ms tramite LaunchedEffect(Unit) { delay(2000L); showSplash = false }.) Tj
+0 -13 Td
+(- Sfondo Nero Puro (#000000): Sia la Surface radice (color = if (showSplash) Color.Black else AppBackground)) Tj
+0 -13 Td
+(  sia il Box di SplashScreen usano Color.Black, fondendosi senza alcuno stacco visivo con R.drawable.splash_logo.) Tj
+0 -13 Td
+(- Wordmark "ORANGEBEAT" (22.sp, FontWeight.Black, letterSpacing = 4.sp) e versione BuildConfig.VERSION_NAME) Tj
+0 -13 Td
+(  ("v1.0.0") allineata in basso al centro (padding(bottom = 32.dp), colore TextMuted #8A827A).) Tj
+
+/F2 10 Tf
+1.000 0.718 0.302 rg
+0 -20 Td
+(2. Sezione 0 - Orientamento Output Finale [OutputOrientation.kt & MainActivity.kt Linee 283-331]:) Tj
+/F1 9.2 Tf
+0.922 0.878 0.851 rg
+0 -14 Td
+(- Posizionata come PRIMA OPZIONE ASSOLUTA nella UI affinche' tutte le fasi successive si adattino al formato:) Tj
+0 -13 Td
+(  * OutputOrientation.PORTRAIT ("Verticale", "9:16", width = 1080, height = 1920, badge = "9:16 FHD").) Tj
+0 -13 Td
+(  * OutputOrientation.LANDSCAPE ("Orizzontale", "16:9", width = 1920, height = 1080, badge = "16:9 FHD").) Tj
+0 -13 Td
+(- Aggiorna istantaneamente (tramite derivedStateOf) la card riepilogativa OutputSpecsSummaryCard in fondo.) Tj
+
+/F2 10 Tf
+1.000 0.718 0.302 rg
+0 -20 Td
+(3. Sezione 1 - Selezione Clip Video, Filtro Anti-Clip Brevi & Estrazione FPS [Linee 170-225 & 336-393]:) Tj
+/F1 9.2 Tf
+0.922 0.878 0.851 rg
+0 -14 Td
+(- Usa ActivityResultContracts.GetMultipleContents() filtrato su MIME "video/*".) Tj
+0 -13 Td
+(- Ispezione asincrona su Dispatchers.IO tramite MediaMetadataRetriever:) Tj
+0 -13 Td
+(  1) Scarta automaticamente tutte le clip con durata < 3000 ms (3 secondi) mostrando un Toast informativo.) Tj
+0 -13 Td
+(  2) Estrae dalla prima clip valida METADATA_KEY_CAPTURE_FRAMERATE (24..120 FPS) o calcola il frame rate) Tj
+0 -13 Td
+(     da (VIDEO_FRAME_COUNT * 1000) / durationMs (normalizzando a 60 FPS se >= 50, altrimenti 30 FPS).) Tj
+ET
+
+BT
+/F3 8.5 Tf
+0.541 0.510 0.478 rg
+32 28 Td
+(ORANGE-BEAT v1.0.0  |  SNAPSHOT TECNICO & MANUALE UTENTE  |  PAGINA 2 DI 9) Tj
+ET
+endstream
+endobj
+
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources 7 0 R /Contents 15 0 R >>
+endobj
+
+15 0 obj
+<< /Length 6120 >>
+stream
+% PAGE 3: USER MANUAL - SCREEN 3 (ANALOG VU METER & MIXER FADER)
+0.059 0.055 0.051 rg
+0 0 595 842 re f
+0.988 0.376 0.000 rg
+0 830 595 12 re f
+
+BT
+/F2 16 Tf
+1 1 1 rg
+32 798 Td
+(MANUALE UTENTE - SCHERMATA 3: VU METER & FADER ANALOGICO) Tj
+/F1 10 Tf
+0.780 0.749 0.718 rg
+0 -16 Td
+(Sezione 2: Strumento Analogico Vintage Retroilluminato Ambra (MixerKnob.kt) e Fader da Banco Mixer) Tj
+ET
+
+% =========================================================================
+% HIGH-PRECISION VECTOR DRAWING OF SECTION 2 (VU METER + MIXER FADER CARD)
+% =========================================================================
+% Outer Section 2 Card (SurfaceContainerLow #1C1B19)
+0.110 0.106 0.098 rg
+0.227 0.212 0.200 RG
+1.5 w
+46 420 503 346 re B
+
+% Inner VU Meter Card (SurfaceContainerHigh #2C2926)
+0.173 0.161 0.149 rg
+64 522 467 228 re f
+
+% Internal Top-Right Digital Tabular Badge "15 s" (Unique duration counter!)
+0.216 0.204 0.188 rg
+0.227 0.212 0.200 RG
+1 w
+454 714 62 26 re B
+BT
+/F3 13 Tf
+0.988 0.376 0.000 rg
+468 723 Td
+(15 s) Tj
+ET
+
+% Vintage Black Outer Chassis (#181818)
+0.094 0.094 0.094 rg
+0.165 0.165 0.165 RG
+2 w
+82 554 431 152 re B
+
+% Backlit Amber/Orange Analog Dial Simulation (concentric warm bands #261000 -> #853D04 -> #D37311 -> #F39624)
+0.149 0.063 0.000 rg
+90 562 415 136 re f
+0.522 0.239 0.016 rg
+106 568 383 124 re f
+0.827 0.451 0.067 rg
+130 574 335 112 re f
+0.953 0.588 0.141 rg
+162 580 271 98 re f
+
+% Scale Arcs (Black 0..50s, Red #D32F2F 50..60s)
+0.000 0.000 0.000 RG
+2.5 w
+135 602 m
+200 668 330 668 405 636 c S
+
+0.827 0.184 0.184 RG
+3.5 w
+405 636 m
+428 625 446 614 460 602 c S
+
+% Scale Numbers (0, 10, 20, 30, 40 in Black; 50, 60 in Red)
+BT
+/F2 11 Tf
+0 0 0 rg
+142 606 Td (0) Tj
+46 24 Td (10) Tj
+50 14 Td (20) Tj
+54 4 Td (30) Tj
+54 -4 Td (40) Tj
+0.827 0.184 0.184 rg
+52 -14 Td (50) Tj
+46 -24 Td (60) Tj
+ET
+
+% Vintage Serif "SEC" Label at Bottom Center of Dial
+BT
+/F4 16 Tf
+0.100 0.050 0.000 rg
+278 584 Td
+(SEC) Tj
+ET
+
+% Physical Needle pointing to 15s (from Pivot 297,564 to 212,672)
+0.067 0.067 0.067 RG
+3 w
+297 568 m
+212 672 l S
+
+% Center Pivot Cap (#222222 outer, #444444 inner)
+0.133 0.133 0.133 rg
+283 562 28 16 re f
+0.267 0.267 0.267 rg
+289 565 16 10 re f
+
+% Red Peak LED Indicator in Top-Right of Dial (> 50s)
+0.353 0.063 0.063 rg
+0.000 0.000 0.000 RG
+1 w
+480 676 12 12 re B
+BT
+/F2 7.5 Tf
+0 0 0 rg
+452 679 Td
+(PEAK) Tj
+ET
+
+% Subtitle inside VU card
+BT
+/F1 9 Tf
+0.780 0.749 0.718 rg
+162 532 Td
+(Trascina la lancetta sul quadrante o usa lo slider sottostante) Tj
+ET
+
+% =========================================================================
+% HORIZONTAL ANALOG MIXER FADER (ExpressiveDurationSlider)
+% =========================================================================
+% Calibration Ticks above & below the fader slot (23 ticks)
+0.988 0.376 0.000 RG
+1.5 w
+84 484 m 84 494 l S
+104 484 m 104 494 l S
+124 484 m 124 494 l S
+144 484 m 144 494 l S
+164 484 m 164 494 l S
+84 452 m 84 462 l S
+104 452 m 104 462 l S
+124 452 m 124 462 l S
+144 452 m 144 462 l S
+164 452 m 164 462 l S
+
+0.541 0.510 0.478 RG
+184 484 m 184 494 l S
+204 484 m 204 494 l S
+224 484 m 224 494 l S
+244 484 m 244 494 l S
+264 484 m 264 494 l S
+284 484 m 284 494 l S
+304 484 m 304 494 l S
+324 484 m 324 494 l S
+344 484 m 344 494 l S
+364 484 m 364 494 l S
+384 484 m 384 494 l S
+404 484 m 404 494 l S
+424 484 m 424 494 l S
+444 484 m 444 494 l S
+464 484 m 464 494 l S
+484 484 m 484 494 l S
+504 484 m 504 494 l S
+184 452 m 184 462 l S
+204 452 m 204 462 l S
+224 452 m 224 462 l S
+244 452 m 244 462 l S
+264 452 m 264 462 l S
+284 452 m 284 462 l S
+304 452 m 304 462 l S
+324 452 m 324 462 l S
+344 452 m 344 462 l S
+364 452 m 364 462 l S
+384 452 m 384 462 l S
+404 452 m 404 462 l S
+424 452 m 424 462 l S
+444 452 m 444 462 l S
+464 452 m 464 462 l S
+484 452 m 484 462 l S
+504 452 m 504 462 l S
+
+% Recessed Metallic Fader Slot (10.dp height)
+0.031 0.031 0.031 rg
+0.173 0.161 0.149 RG
+1 w
+74 468 446 10 re B
+
+% Active Flame Orange Glow inside Slot up to Fader Cap
+0.988 0.376 0.000 rg
+76 472 90 2 re f
+
+% 3D Concave Fader Cap (38.dp x 52.dp) at 15s position
+0.220 0.210 0.200 rg
+0.040 0.040 0.040 RG
+1.5 w
+146 447 38 52 re B
+0.094 0.090 0.086 rg
+154 449 22 48 re f
+% Grip ridges (left & right)
+0.050 0.050 0.050 rg
+151 454 2 38 re f
+155 452 2 42 re f
+173 452 2 42 re f
+177 454 2 38 re f
+% Center inlaid Flame Orange reference line
+0.988 0.376 0.000 rg
+163 449 4 48 re f
+
+% Min / Max Labels
+BT
+/F3 9 Tf
+0.541 0.510 0.478 rg
+74 430 Td
+(5 s (Min)) Tj
+388 0 Td
+(60 s (Max)) Tj
+ET
+
+% =========================================================================
+% TECHNICAL SPECIFICATION OF MIXERKNOB.KT & EXPRESSIVEDURATIONSLIDER
+% =========================================================================
+0.110 0.106 0.098 rg
+0.227 0.212 0.200 RG
+1 w
+32 56 531 348 re B
+
+0.988 0.376 0.000 rg
+32 378 531 26 re f
+BT
+/F2 11.5 Tf
+1 1 1 rg
+46 387 Td
+(INGEGNERIA DELLA SEZIONE 2: VU METER VINTAGE & FADER ANALOGICO) Tj
+ET
+
+BT
+/F2 10 Tf
+1.000 0.718 0.302 rg
+46 356 Td
+(1. Quadrante Analogico Vintage [MixerKnob.kt - MixerKnobWithVuMeter]:) Tj
+/F1 9.2 Tf
+0.922 0.878 0.851 rg
+0 -14 Td
+(- Contatore Unico Integrato: Rimosso ogni contatore esterno ridondante e la scritta "STRUMENTO ANALOGICO VU";) Tj
+0 -13 Td
+(  resta esclusivamente il badge tabulare interno in alto a destra ("15 s" in TabularNumberStyle #FC6000).) Tj
+0 -13 Td
+(- Retroilluminazione Ambra/Arancione (vintageBacklightBrush): Brush.radialGradient pre-allocato in remember) Tj
+0 -13 Td
+(  con 4 stop: Centro #F39624 -> Transizione #D37311 -> Bordo brunito #853D04 -> Ombra case #261000.) Tj
+0 -13 Td
+(- Geometria Scala & Zona Rossa: Escursione angolare di 100 gradi (-50 deg .. +50 deg, scala 0..60s).) Tj
+0 -13 Td
+(  Arco nero (0..50s, sweep 83.3 deg) e Zona di Picco rossa #D32F2F (50..60s, sweep 16.7 deg) + LED di picco.) Tj
+0 -13 Td
+(- Fisica a Molla & Rilevamento Touch Polare: La lancetta usa animateFloatAsState con spring(dampingRatio=0.55f,) Tj
+0 -13 Td
+(  stiffness=90f). Il drag calcola atan2(deltaX, -deltaY) rispetto al perno (width/2, height*1.15f) con Haptic.) Tj
+0 -13 Td
+(- Zero Allocazioni in DrawScope: textPaintBlack, textPaintRed, blackArcStroke, redArcStroke pre-allocati.) Tj
+
+/F2 10 Tf
+1.000 0.718 0.302 rg
+0 -18 Td
+(2. Fader Orizzontale da Banco Mixer [MainActivity.kt - ExpressiveDurationSlider, Linee 972-1149]:) Tj
+/F1 9.2 Tf
+0.922 0.878 0.851 rg
+0 -14 Td
+(- Fader Cap 3D Concavo (38.dp x 52.dp): Gradiente orizzontale simmetrico a 7 stop (#3E3C3A -> #141312 -> #3A3836)) Tj
+0 -13 Td
+(  che riproduce l'incavo concavo per il dito, 4 zigrinature nere (Grip) e tacca centrale intarsiata #FC6000.) Tj
+0 -13 Td
+(- Fessura Metallica Incassata (Fader Slot 10.dp) + 23 Tacche di Calibrazione superiori/inferiori che si) Tj
+0 -13 Td
+(  illuminano progressivamente in Flame Orange (#FC6000) lungo la corsa attiva del cursore.) Tj
+ET
+
+BT
+/F3 8.5 Tf
+0.541 0.510 0.478 rg
+32 28 Td
+(ORANGE-BEAT v1.0.0  |  SNAPSHOT TECNICO & MANUALE UTENTE  |  PAGINA 3 DI 9) Tj
+ET
+endstream
+endobj
+
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources 7 0 R /Contents 17 0 R >>
+endobj
+
+17 0 obj
+<< /Length 5840 >>
+stream
+% PAGE 4: USER MANUAL - SCREEN 4 (SOUNDTRACK, COLOR GRADING, VFX)
+0.059 0.055 0.051 rg
+0 0 595 842 re f
+0.988 0.376 0.000 rg
+0 830 595 12 re f
+
+BT
+/F2 16 Tf
+1 1 1 rg
+32 798 Td
+(MANUALE UTENTE - SCHERMATA 4: AUDIO, COLOR GRADING & VFX) Tj
+/F1 10 Tf
+0.780 0.749 0.718 rg
+0 -16 Td
+(Sezioni 3, 4 e 5: LazyRow Orizzontali Anti-Wrapping, 17 Basi Musicali, 9 Matrici Colore e 4 VFX) Tj
+ET
+
+% =========================================================================
+% VECTOR ILLUSTRATION OF SECTIONS 3, 4, 5 CARDS
+% =========================================================================
+% Section 3 Card: COLONNA SONORA
+0.110 0.106 0.098 rg
+0.227 0.212 0.200 RG
+1 w
+32 684 531 82 re B
+BT
+/F2 9.5 Tf
+0.780 0.749 0.718 rg
+48 746 Td (COLONNA SONORA) Tj
+0.988 0.376 0.000 rg
+445 0 Td (DUBSTEP) Tj
+ET
+% Chips in Section 3 (LazyRow: TECHNO, DUBSTEP active, ROCK, MOTIVATIONAL)
+0.173 0.161 0.149 rg
+48 696 95 34 re B
+0.988 0.376 0.000 rg
+153 696 105 34 re f
+0.173 0.161 0.149 rg
+268 696 85 34 re B
+363 696 135 34 re B
+BT
+/F2 9 Tf
+0.922 0.878 0.851 rg
+74 710 Td (TECHNO) Tj
+1 1 1 rg
+108 0 Td (DUBSTEP) Tj
+0.922 0.878 0.851 rg
+112 0 Td (ROCK) Tj
+90 0 Td (MOTIVATIONAL) Tj
+ET
+
+% Section 4 Card: COLOR GRADING
+0.110 0.106 0.098 rg
+0.227 0.212 0.200 RG
+32 590 531 82 re B
+BT
+/F2 9.5 Tf
+0.780 0.749 0.718 rg
+48 652 Td (COLOR GRADING) Tj
+0.988 0.376 0.000 rg
+435 0 Td (Nessuno) Tj
+ET
+% Chips in Section 4 (NESSUNO active in 1st position, TEAL & ORANGE, KODAK SUPER 8, ILFORD PAN F)
+0.988 0.376 0.000 rg
+48 602 95 34 re f
+0.173 0.161 0.149 rg
+153 602 125 34 re B
+288 602 125 34 re B
+423 602 120 34 re B
+BT
+/F2 9 Tf
+1 1 1 rg
+70 616 Td (NESSUNO) Tj
+0.922 0.878 0.851 rg
+98 0 Td (TEAL & ORANGE) Tj
+136 0 Td (KODAK SUPER 8) Tj
+136 0 Td (ILFORD PAN F) Tj
+ET
+
+% Section 5 Card: EFFETTI VISIVI (VFX)
+0.110 0.106 0.098 rg
+0.227 0.212 0.200 RG
+32 496 531 82 re B
+BT
+/F2 9.5 Tf
+0.780 0.749 0.718 rg
+48 558 Td (EFFETTI VISIVI (VFX)) Tj
+0.988 0.376 0.000 rg
+445 0 Td (Flash) Tj
+ET
+% Chips in Section 5 (NESSUNO, FLASH active, PELLICOLA VINTAGE, VHS GLITCH)
+0.173 0.161 0.149 rg
+48 508 95 34 re B
+0.988 0.376 0.000 rg
+153 508 85 34 re f
+0.173 0.161 0.149 rg
+248 508 145 34 re B
+403 508 115 34 re B
+BT
+/F2 9 Tf
+0.922 0.878 0.851 rg
+70 522 Td (NESSUNO) Tj
+1 1 1 rg
+106 0 Td (FLASH) Tj
+0.922 0.878 0.851 rg
+86 0 Td (PELLICOLA VINTAGE) Tj
+164 0 Td (VHS GLITCH) Tj
+ET
+
+% =========================================================================
+% REFERENCE TABLES FOR SOUNDTRACKS, COLOR PRESETS & VFX PRESETS
+% =========================================================================
+0.110 0.106 0.098 rg
+0.227 0.212 0.200 RG
+32 56 531 426 re B
+
+0.988 0.376 0.000 rg
+32 456 531 26 re f
+BT
+/F2 11.5 Tf
+1 1 1 rg
+46 465 Td
+(CATALOGO COMPLETO LIBRERIA AUDIO, COLOR GRADING & EFFETTI VFX) Tj
+ET
+
+BT
+/F2 10 Tf
+1.000 0.718 0.302 rg
+46 436 Td
+(A. Sezione 3 - Colonna Sonora [AudioBeatDetector.kt - 17 Tracce in res/raw/]:) Tj
+/F1 9 Tf
+0.922 0.878 0.851 rg
+0 -14 Td
+(- Layout LazyRow con ExpressiveFilterChip (maxLines = 1, softWrap = false: impedisce a "DUBSTEP" di andare a capo).) Tj
+0 -13 Td
+(- Selezione automatica della risorsa R.raw in base alla durata (SHORT <= 20s, MEDIUM 21..45s, LONG > 45s):) Tj
+/F3 8.5 Tf
+0.780 0.749 0.718 rg
+0 -13 Td
+(  * Techno       -> SHORT: [techno, techno2] | MEDIUM: [techno3, techno6] | LONG: [techno7, techno10]) Tj
+0 -12 Td
+(  * Dubstep      -> SHORT: [techno2]         | MEDIUM: [techno3]          | LONG: [techno6, techno7]) Tj
+0 -12 Td
+(  * Rock         -> SHORT: [rock, rock4, 5]  | MEDIUM: [rock6, rock7, 8]  | LONG: [rock9, rock10]) Tj
+0 -12 Td
+(  * Motivational -> SHORT: [motivational]    | MEDIUM: [techno8, motiv.]  | LONG: [techno9, motivational]) Tj
+
+/F2 10 Tf
+1.000 0.718 0.302 rg
+0 -18 Td
+(B. Sezione 4 - Tutti i 9 Preset di Color Grading [ColorPreset.kt - Matrici RgbMatrix 4x4 Column-Major]:) Tj
+/F1 9 Tf
+0.922 0.878 0.851 rg
+0 -14 Td
+(1. NONE ("Nessuno" - Default in 1a posizione): Bypass totale di RgbMatrix (colori 100% stock della fotocamera).) Tj
+0 -13 Td
+(2. TEAL_ORANGE ("Teal & Orange"): Contrasto cinematografico CrossFit (ombre ottanio B=1.25, incarnati R=1.15).) Tj
+0 -13 Td
+(3. KODAK_SUPER_8 ("Kodak Super 8"): Look pellicola caldo anni '70 (R=1.10, B=0.80, offset caldo +0.05/+0.02).) Tj
+0 -13 Td
+(4. ILFORD_PAN_F ("Ilford PAN F"): Monocromatico B&W ad alto contrasto (pesi luminanza 0.30 R + 0.59 G + 0.11 B).) Tj
+0 -13 Td
+(5. BLEACH_BYPASS ("Bleach Bypass"): Ritenzione d'argento desaturata e metallica con offset neri -0.05.) Tj
+0 -13 Td
+(6. PORTRA_400 ("Portra 400"): Toni pastello morbidi con offset cremoso sulle ombre (+0.10 R, +0.08 G, +0.05 B).) Tj
+0 -13 Td
+(7. CYBERPUNK ("Cyberpunk Neon"): Viraggio magenta/ciano per luci indoor LED (B=1.20, cross-talk R/B).) Tj
+0 -13 Td
+(8. DESATURATED_COLD ("Nordic Cold"): Atmosfera glaciale desaturata con dominanti fredde blu acciaio.) Tj
+0 -13 Td
+(9. ORANGE_CRUSH ("Orange Crush"): Saturazione spinta sui rossi/arancioni (R=1.30, B=0.60) in stile brand.) Tj
+
+/F2 10 Tf
+1.000 0.718 0.302 rg
+0 -18 Td
+(C. Sezione 5 - Tutti i 4 Preset VFX [VfxPreset.kt & VfxEffect.kt]:) Tj
+/F1 9 Tf
+0.922 0.878 0.851 rg
+0 -14 Td
+(1. NONE ("Nessuno") | 2. FLASH ("Flash"): Impulso luminoso 120ms (boost 2.8x -> 1.0x) sui tagli in DROP e CLIMAX.) Tj
+0 -13 Td
+(3. OLD_FILM ("Pellicola Vintage"): Shader GLSL old_film_shader.glsl (grana 0.15, vignettatura, graffi verticali).) Tj
+0 -13 Td
+(4. TV_GLITCH ("VHS Glitch"): Shader GLSL tv_glitch_shader.glsl (curva CRT barrel, tearing, RGB split, scanlines).) Tj
+ET
+
+BT
+/F3 8.5 Tf
+0.541 0.510 0.478 rg
+32 28 Td
+(ORANGE-BEAT v1.0.0  |  SNAPSHOT TECNICO & MANUALE UTENTE  |  PAGINA 4 DI 9) Tj
+ET
+endstream
+endobj
+
+18 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources 7 0 R /Contents 19 0 R >>
+endobj
+
+19 0 obj
+<< /Length 5620 >>
+stream
+% PAGE 5: USER MANUAL - SCREEN 5 (OUTPUT SPECS SUMMARY CARD, CTA & EXPORT)
+0.059 0.055 0.051 rg
+0 0 595 842 re f
+0.988 0.376 0.000 rg
+0 830 595 12 re f
+
+BT
+/F2 16 Tf
+1 1 1 rg
+32 798 Td
+(MANUALE UTENTE - SCHERMATA 5: SPECIFICHE OUTPUT & EXPORT) Tj
+/F1 10 Tf
+0.780 0.749 0.718 rg
+0 -16 Td
+(Riquadro Riepilogativo M3 Expressive OutputSpecsSummaryCard, CTA Crea Reel & Apertura FileProvider) Tj
+ET
+
+% =========================================================================
+% VECTOR ILLUSTRATION OF OUTPUTSPECSSUMMARYCARD + CTA + PROGRESS + READY CARD
+% =========================================================================
+% 1. OutputSpecsSummaryCard (SurfaceContainerHigh #2C2926, rounded 24.dp)
+0.173 0.161 0.149 rg
+0.227 0.212 0.200 RG
+1.5 w
+46 618 503 142 re B
+
+% Orange Status Dot + Title + Format Badge "9:16 FHD"
+0.988 0.376 0.000 rg
+66 734 8 8 re f
+BT
+/F2 9.5 Tf
+0.780 0.749 0.718 rg
+82 734 Td
+(SPECIFICHE OUTPUT FINALE) Tj
+ET
+
+0.239 0.086 0.000 rg
+462 728 68 20 re f
+BT
+/F3 9 Tf
+0.988 0.376 0.000 rg
+472 735 Td
+(9:16 FHD) Tj
+ET
+
+% Three OutputSpecPill Columns (SurfaceContainerLowest #181716)
+% Pill 1: Risoluzione
+0.094 0.090 0.086 rg
+0.227 0.212 0.200 RG
+1 w
+64 634 146 82 re B
+BT
+/F1 9 Tf
+0.780 0.749 0.718 rg
+112 696 Td (Risoluzione) Tj
+/F3 14 Tf
+1 1 1 rg
+98 672 Td (1080x1920) Tj
+/F3 9 Tf
+0.988 0.376 0.000 rg
+130 650 Td (px) Tj
+ET
+
+% Pill 2: Frame Rate
+0.094 0.090 0.086 rg
+225 634 146 82 re B
+BT
+/F1 9 Tf
+0.780 0.749 0.718 rg
+274 696 Td (Frame Rate) Tj
+/F3 14 Tf
+1 1 1 rg
+272 672 Td (60 FPS) Tj
+/F3 9 Tf
+0.988 0.376 0.000 rg
+276 650 Td (Costante) Tj
+ET
+
+% Pill 3: Profondita Colore
+0.094 0.090 0.086 rg
+386 634 146 82 re B
+BT
+/F1 9 Tf
+0.780 0.749 0.718 rg
+422 696 Td (Profondita Colore) Tj
+/F3 14 Tf
+1 1 1 rg
+420 672 Td (8-bit SDR) Tj
+/F3 9 Tf
+0.988 0.376 0.000 rg
+440 650 Td (Rec.709) Tj
+ET
+
+% 2. CTA Button "CREA REEL" (Height 64.dp, FlameOrange #FC6000)
+0.988 0.376 0.000 rg
+46 544 503 56 re f
+BT
+/F2 17 Tf
+1 1 1 rg
+246 566 Td
+(CREA REEL) Tj
+ET
+
+% 3. Completed Video Card "REEL PRONTO! TOCCA QUI PER GUARDARLO"
+0.239 0.086 0.000 rg
+0.988 0.376 0.000 RG
+1.5 w
+46 476 503 52 re B
+BT
+/F2 11 Tf
+1 1 1 rg
+164 498 Td
+(>   REEL PRONTO! TOCCA QUI PER GUARDARLO) Tj
+ET
+
+% =========================================================================
+% TECHNICAL DETAILS OF SECTION 6 & OUTPUT SPECS SUMMARY CARD
+% =========================================================================
+0.110 0.106 0.098 rg
+0.227 0.212 0.200 RG
+1 w
+32 56 531 402 re B
+
+0.988 0.376 0.000 rg
+32 432 531 26 re f
+BT
+/F2 11.5 Tf
+1 1 1 rg
+46 441 Td
+(LOGICA REATTIVA DI OUTPUTSPECSSUMMARYCARD & WORKFLOW DI ESPORTAZIONE) Tj
+ET
+
+BT
+/F2 10 Tf
+1.000 0.718 0.302 rg
+46 410 Td
+(1. Riquadro OutputSpecsSummaryCard [OutputOrientation.kt, VideoEditor.kt, MainActivity.kt Linee 821-965]:) Tj
+/F1 9.2 Tf
+0.922 0.878 0.851 rg
+0 -14 Td
+(- Posizionato immediatamente sopra il pulsante CTA "CREA REEL" (Spacer 12.dp).) Tj
+0 -13 Td
+(- Stato derivato ad alta efficienza tramite remember(selectedOrientation, detectedOutputFps) { derivedStateOf }:) Tj
+0 -13 Td
+(  * Risoluzione: "1080x1920" (px) con badge "9:16 FHD" in Portrait; "1920x1080" (px) con badge "16:9 FHD" in Landscape.) Tj
+0 -13 Td
+(  * Frame Rate: "<safeFps> FPS" ("Costante"), estratto dai metadati reali della clip o default 30 FPS.) Tj
+0 -13 Td
+(  * Profondita' Colore: Costante hardware Media3 SDR "8-bit SDR" con spazio colore standard "Rec.709".) Tj
+0 -13 Td
+(- Transizioni fluide M3 Expressive con animateContentSize(spring(StiffnessMediumLow)) e AnimatedContent.) Tj
+
+/F2 10 Tf
+1.000 0.718 0.302 rg
+0 -18 Td
+(2. Pipeline Sequenziale Asincrona in generateReel() [MainActivity.kt Linee 604-690]:) Tj
+/F1 9.2 Tf
+0.922 0.878 0.851 rg
+0 -14 Td
+(- Protezione Display: DisposableEffect(isGenerating) imposta view.keepScreenOn = true durante il rendering.) Tj
+0 -13 Td
+(- 5 Stati di Avanzamento Mostrati in Tempo Reale (LinearProgressIndicator + CircularProgressIndicator):) Tj
+0 -13 Td
+(  [Step 0] "ESTRAZIONE METADATI CLIP..." -> Lettura durate clip su Dispatchers.IO.) Tj
+0 -13 Td
+(  [Step 1] "ANALISI AUDIO (BEAT DETECTION)..." -> RealBeatDetector.findBeats() su Dispatchers.Default.) Tj
+0 -13 Td
+(  [Step 2] "ANALISI AI DEI VIDEO (MOTION & POSE)..." -> Esecuzione parallela async/awaitAll di) Tj
+0 -13 Td
+(           MotionAnalyzer.analyzeMotion() e findActionPeaks() (ML Kit Pose) su tutte le clip.) Tj
+0 -13 Td
+(  [Step 3] "CALCOLO TAGLI INTELLIGENTI..." -> AiDirector.generateEditPlanLocal() produce il JSON EDL.) Tj
+0 -13 Td
+(  [Step 4] "MONTAGGIO MEDIA3 IN CORSO..." -> VideoEditor.executeEditPlan() esporta il file MP4 finale.) Tj
+
+/F2 10 Tf
+1.000 0.718 0.302 rg
+0 -18 Td
+(3. Salvataggio, Indicizzazione Galleria & Apertura Sicura [VideoEditor.kt & openVideo()]:) Tj
+/F1 9.2 Tf
+0.922 0.878 0.851 rg
+0 -14 Td
+(- Il video viene salvato in Environment.DIRECTORY_MOVIES/OrangeBeat_Final_<timestamp>.mp4 (con mkdirs()).) Tj
+0 -13 Td
+(- MediaScannerConnection.scanFile(..., arrayOf("video/mp4")) rende il Reel subito visibile in Galleria.) Tj
+0 -13 Td
+(- openVideo() converte file:// in content:// tramite FileProvider ("com.example.crossreel.fileprovider")) Tj
+0 -13 Td
+(  e lancia Intent.ACTION_VIEW con FLAG_GRANT_READ_URI_PERMISSION e fallback Intent.createChooser.) Tj
+ET
+
+BT
+/F3 8.5 Tf
+0.541 0.510 0.478 rg
+32 28 Td
+(ORANGE-BEAT v1.0.0  |  SNAPSHOT TECNICO & MANUALE UTENTE  |  PAGINA 5 DI 9) Tj
+ET
+endstream
+endobj
+
+20 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources 7 0 R /Contents 21 0 R >>
+endobj
+
+21 0 obj
+<< /Length 5580 >>
+stream
+% PAGE 6: COMPLETE TECH STACK & MATERIAL 3 EXPRESSIVE DESIGN SYSTEM
+0.059 0.055 0.051 rg
+0 0 595 842 re f
+0.988 0.376 0.000 rg
+0 830 595 12 re f
+
+BT
+/F2 16 Tf
+1 1 1 rg
+32 798 Td
+(STACK TECNOLOGICO & DESIGN SYSTEM M3 EXPRESSIVE) Tj
+/F1 10 Tf
+0.780 0.749 0.718 rg
+0 -16 Td
+(Toolchain Gradle 9.4.1 / Kotlin 2.2.10, Dipendenze Core e Token Cromatici/Tipografici (ui/theme/)) Tj
+ET
+
+% =========================================================================
+% TABLE 1: TOOLCHAIN & DEPENDENCIES (build.gradle.kts & libs.versions.toml)
+% =========================================================================
+0.110 0.106 0.098 rg
+0.227 0.212 0.200 RG
+1 w
+32 470 531 294 re B
+
+0.988 0.376 0.000 rg
+32 738 531 26 re f
+BT
+/F2 11.5 Tf
+1 1 1 rg
+46 747 Td
+(1. STACK TECNOLOGICO COMPLETO (app/build.gradle.kts & gradle/libs.versions.toml)) Tj
+ET
+
+BT
+/F3 9 Tf
+1.000 0.718 0.302 rg
+46 718 Td
+(COMPONENTE / LIBRERIA                 VERSIONE / TARGET          RUOLO NELL'ARCHITETTURA) Tj
+/F1 9 Tf
+0.922 0.878 0.851 rg
+0 -16 Td
+(Kotlin Compiler & Compose Plugin      2.2.10                     Linguaggio core, Coroutines, Enum.entries) Tj
+0 -14 Td
+(Android Gradle Plugin (AGP)           9.4.1                      Build system Android & generazione BuildConfig) Tj
+0 -14 Td
+(JVM Bytecode Target                   JavaVersion.VERSION_17     Target compilazione bytecode Java 17) Tj
+0 -14 Td
+(Android SDK Configuration             minSdk 35 / targetSdk 37   Android 15/16+ nativo, compileSdk = 37) Tj
+0 -14 Td
+(Jetpack Compose BOM                   2026.02.01                 UI dichiarativa, Material 3, Animation, Canvas) Tj
+0 -14 Td
+(AndroidX Activity Compose             1.8.0                      enableEdgeToEdge(), GetMultipleContents) Tj
+0 -14 Td
+(AndroidX Core KTX & Lifecycle         1.10.1 / 2.6.1             FileProvider, WindowCompat, CoroutineScope) Tj
+0 -14 Td
+(AndroidX Media3 Transformer           1.4.1                      Transcodifica hardware, Composition, Muxer MP4) Tj
+0 -14 Td
+(AndroidX Media3 Effect & Common       1.4.1                      Presentation, RgbMatrix, GlEffect, AudioProcessor) Tj
+0 -14 Td
+(Google ML Kit Pose Detection          17.0.0                     Modello scheletrico on-device SINGLE_IMAGE_MODE) Tj
+0 -14 Td
+(Android Low-Level Media API           Nativo (API 35+)           MediaExtractor, MediaCodec, MediaMetadataRetriever) Tj
+0 -14 Td
+(OpenGL ES 2.0 (GLES20)                GLSL #version 100          Vertex & Fragment Shaders per-frame a 60fps) Tj
+ET
+
+% =========================================================================
+% SECTION 2: MATERIAL 3 EXPRESSIVE DARK PALETTE SWATCHES (Color.kt)
+% =========================================================================
+0.110 0.106 0.098 rg
+0.227 0.212 0.200 RG
+32 230 531 224 re B
+
+0.239 0.086 0.000 rg
+32 428 531 26 re f
+BT
+/F2 11.5 Tf
+0.988 0.376 0.000 rg
+46 437 Td
+(2. PALETTE COLORI MATERIAL 3 EXPRESSIVE DARK (Color.kt & Theme.kt)) Tj
+ET
+
+% Color Swatch Boxes Row 1
+0.000 0.000 0.000 rg 0.3 0.3 0.3 RG 1 w 46 362 74 44 re B
+0.059 0.055 0.051 rg 130 362 74 44 re B
+0.110 0.106 0.098 rg 214 362 74 44 re B
+0.173 0.161 0.149 rg 298 362 74 44 re B
+0.216 0.204 0.188 rg 382 362 74 44 re B
+0.988 0.376 0.000 rg 466 362 74 44 re B
+
+BT
+/F3 7.5 Tf
+1 1 1 rg
+52 348 Td (#000000) Tj
+84 0 Td (#0F0E0D) Tj
+84 0 Td (#1C1B19) Tj
+84 0 Td (#2C2926) Tj
+84 0 Td (#373430) Tj
+0.988 0.376 0.000 rg
+84 0 Td (#FC6000) Tj
+/F1 7 Tf
+0.780 0.749 0.718 rg
+-420 -10 Td (Splash Black) Tj
+84 0 Td (AppBackground) Tj
+84 0 Td (ContainerLow) Tj
+84 0 Td (ContainerHigh) Tj
+84 0 Td (ContainerHighest) Tj
+84 0 Td (FlameOrange) Tj
+ET
+
+BT
+/F1 9 Tf
+0.922 0.878 0.851 rg
+46 314 Td
+(- PrimaryContainerColor (#3D1600) & OnPrimaryContainerColor (#FFDBCC): Usati per badge attivi e card Reel Pronto.) Tj
+0 -14 Td
+(- WarmAmber (#FFB74D) & TertiaryCoral (#FF8A65): Accenti secondari e terziari ad alto contrasto su OLED.) Tj
+0 -14 Td
+(- OutlineColor (#8A827A) & OutlineVariantColor (#3A3633): Bordi 1.dp delle card SurfaceContainerLow/High.) Tj
+0 -14 Td
+(- TextPrimary (#EBE0D9), TextSecondary (#C7BFB7), TextMuted (#8A827A): Gerarchia testo calibrata anti-abbagliamento.) Tj
+0 -14 Td
+(- ExpressiveShapes (Theme.kt): extraSmall=8.dp, small=12.dp, medium=16.dp, large=24.dp, extraLarge=28.dp.) Tj
+ET
+
+% =========================================================================
+% SECTION 3: TYPOGRAPHY & TABULAR NUMBERS (Type.kt)
+% =========================================================================
+0.110 0.106 0.098 rg
+0.227 0.212 0.200 RG
+32 56 531 158 re B
+
+BT
+/F2 11 Tf
+1.000 0.718 0.302 rg
+46 192 Td
+(3. TIPOGRAFIA & STILE NUMERI TABULARI ANTI-JITTER (Type.kt):) Tj
+/F1 9.2 Tf
+0.922 0.878 0.851 rg
+0 -16 Td
+(- TabularNumberStyle: TextStyle(fontFamily = FontFamily.Default, fontWeight = FontWeight.Bold,) Tj
+0 -13 Td
+(  fontFeatureSettings = "tnum"). Garantisce larghezza fissa identica per tutte le cifre 0..9, eliminando) Tj
+0 -13 Td
+(  qualsiasi oscillazione orizzontale nei contatori dinamici (15 s, 1080x1920, 60 FPS, v1.0.0).) Tj
+0 -15 Td
+(- Albero Completo dei Sorgenti Kotlin (app/src/main/java/com/example/crossreel/):) Tj
+/F3 8.5 Tf
+0.780 0.749 0.718 rg
+0 -13 Td
+(  MainActivity.kt (1241 righe) | MixerKnob.kt (345 righe) | AiDirector.kt (279 righe) | RealBeatDetector.kt (277 righe)) Tj
+0 -12 Td
+(  VideoEditor.kt (229 righe)   | PoseActionFinder.kt (109)| MotionAnalyzer.kt (88)   | ColorPreset.kt (77 righe)) Tj
+0 -12 Td
+(  VolumeAudioProcessor.kt (74) | VfxEffect.kt (64 righe)  | ErrorLogger.kt (58 righe)| OutputOrientation.kt (37 righe)) Tj
+0 -12 Td
+(  AudioBeatDetector.kt (37)    | KenBurnsEffect.kt (35)   | VfxPreset.kt (8 righe)   | ui/theme/{Color,Type,Theme}.kt) Tj
+ET
+
+BT
+/F3 8.5 Tf
+0.541 0.510 0.478 rg
+32 28 Td
+(ORANGE-BEAT v1.0.0  |  SNAPSHOT TECNICO & MANUALE UTENTE  |  PAGINA 6 DI 9) Tj
+ET
+endstream
+endobj
+
+22 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources 7 0 R /Contents 23 0 R >>
+endobj
+
+23 0 obj
+<< /Length 6150 >>
+stream
+% PAGE 7: ALGORITHMS PART 1 - REALBEATDETECTOR, MOTIONANALYZER, POSEACTIONFINDER
+0.059 0.055 0.051 rg
+0 0 595 842 re f
+0.988 0.376 0.000 rg
+0 830 595 12 re f
+
+BT
+/F2 16 Tf
+1 1 1 rg
+32 798 Td
+(ALGORITMI DI ANALISI AUDIO & COMPUTER VISION ON-DEVICE) Tj
+/F1 10 Tf
+0.780 0.749 0.718 rg
+0 -16 Td
+(Logiche Matematiche di RealBeatDetector.kt, MotionAnalyzer.kt e PoseActionFinder.kt) Tj
+ET
+
+% =========================================================================
+% MODULE 1: REALBEATDETECTOR.KT
+% =========================================================================
+0.110 0.106 0.098 rg
+0.227 0.212 0.200 RG
+1 w
+32 518 531 248 re B
+
+0.988 0.376 0.000 rg
+32 740 531 26 re f
+BT
+/F2 11.5 Tf
+1 1 1 rg
+46 749 Td
+(1. RealBeatDetector.kt - DECODIFICA PCM 16-BIT, LPF 160Hz & PICCHI RMS) Tj
+ET
+
+BT
+/F2 9.5 Tf
+1.000 0.718 0.302 rg
+46 720 Td
+(Pipeline DSP nel Dominio del Tempo (Dispatchers.Default, Thread "BeatDetector-Worker", Timeout 10s):) Tj
+/F1 9 Tf
+0.922 0.878 0.851 rg
+0 -14 Td
+(1) Estrazione Hardware: MediaExtractor apre AssetFileDescriptor da R.raw.<track>; seleziona la traccia "audio/*") Tj
+0 -13 Td
+(   e decodifica in byte PCM 16-bit signed little-endian tramite MediaCodec fino a (targetDurationMs + 2000 ms).) Tj
+0 -14 Td
+(2) Conversione Mono & Filtro Passa-Basso IIR a 1 Polo (fc = 160.0 Hz per isolare la cassa / kick drum):) Tj
+/F3 8.8 Tf
+1 1 1 rg
+0 -13 Td
+(   dt = 1.0 / sampleRate;   lpfAlpha = clamp(2.0 * PI * dt * 160.0, 0.005, 0.25)) Tj
+0 -12 Td
+(   mono = (ch0 + ch1) / channelCount;   lpfState += lpfAlpha * (mono - lpfState)) Tj
+/F1 9 Tf
+0.922 0.878 0.851 rg
+0 -14 Td
+(3) Calcolo Energia RMS su Finestre da 50 ms (samplesPerWindow = sampleRate * 50 / 1000):) Tj
+/F3 8.8 Tf
+1 1 1 rg
+0 -13 Td
+(   rms[k] = sqrt( sum(lpfState^2) / samplesPerWindow );   exactTimeMs[k] = totalFramesProcessed * 1000 / sampleRate) Tj
+/F1 9 Tf
+0.922 0.878 0.851 rg
+0 -14 Td
+(4) Rilevamento Massimi Locali con Media Mobile (20 finestre = 1.0s), Soglia 1.35x e Refrattarieta' 250ms:) Tj
+/F3 8.8 Tf
+1 1 1 rg
+0 -13 Td
+(   isLocalMax = (energies[i] >= energies[i-1]) && (energies[i] >= energies[i+1])) Tj
+0 -12 Td
+(   BEAT VALIDATO SE: isLocalMax && energies[i] > (avg_20 * 1.35) && (timestamps[i] - lastBeat >= 250 ms)) Tj
+/F1 9 Tf
+0.922 0.878 0.851 rg
+0 -14 Td
+(5) Stima Mediana BPM, Gap Filler & Fallback: Calcola la mediana degli intervalli validi (250..1200ms, 50..240 BPM).) Tj
+0 -13 Td
+(   Se un silenzio/breakdown supera 1.4x l'intervallo mediano, inserisce beat sintetici in fase; fallback a 128 BPM.) Tj
+ET
+
+% =========================================================================
+% MODULE 2: MOTIONANALYZER.KT
+% =========================================================================
+0.110 0.106 0.098 rg
+0.227 0.212 0.200 RG
+32 308 531 196 re B
+
+0.239 0.086 0.000 rg
+32 478 531 26 re f
+BT
+/F2 11.5 Tf
+0.988 0.376 0.000 rg
+46 487 Td
+(2. MotionAnalyzer.kt - ENERGIA CINETICA SAD (SUM OF ABSOLUTE DIFFERENCES) A 64x64 PX) Tj
+ET
+
+BT
+/F1 9.2 Tf
+0.922 0.878 0.851 rg
+46 456 Td
+(- Obiettivo: Quantificare l'intensita' di movimento globale di una clip in un punteggio motionScore in [0.0, 1.0].) Tj
+0 -14 Td
+(- Prevenzione OOM: Estrae numFrames = 5 fotogrammi equidistanti (intervalMs = durationMs / 6) ridimensionati) Tj
+0 -13 Td
+(  direttamente a 64x64 pixel con retriever.getScaledFrameAtTime(timeUs, OPTION_CLOSEST, 64, 64).) Tj
+0 -14 Td
+(- Formula Matematica SAD su 4 Coppie di Frame Consecutive (4096 pixel per frame, 3 canali RGB):) Tj
+/F3 8.8 Tf
+1 1 1 rg
+0 -15 Td
+(  totalDifference = SUM_{i=0..3} SUM_{p=0..4095} ( |R1[p]-R2[p]| + |G1[p]-G2[p]| + |B1[p]-B2[p]| )) Tj
+0 -13 Td
+(  maxDiffPerPair  = 64 * 64 * 3 * 255 = 3,133,440;    totalMaxDiff = maxDiffPerPair * (frames.size - 1)) Tj
+0 -13 Td
+(  motionScore     = clamp( totalDifference.toDouble() / totalMaxDiff.toDouble(), 0.0f, 1.0f )) Tj
+/F1 9.2 Tf
+0.922 0.878 0.851 rg
+0 -15 Td
+(- Gestione Memoria: Ogni Bitmap 64x64 viene immediatamente liberata con bmp.recycle() prima del return.) Tj
+ET
+
+% =========================================================================
+% MODULE 3: POSEACTIONFINDER.KT
+% =========================================================================
+0.110 0.106 0.098 rg
+0.227 0.212 0.200 RG
+32 56 531 238 re B
+
+0.239 0.086 0.000 rg
+32 268 531 26 re f
+BT
+/F2 11.5 Tf
+0.988 0.376 0.000 rg
+46 277 Td
+(3. PoseActionFinder.kt - TRACCIAMENTO SCHELETRICO ML KIT & VELOCITA' VERTICALE DELTA-Y) Tj
+ET
+
+BT
+/F1 9.2 Tf
+0.922 0.878 0.851 rg
+46 246 Td
+(- Obiettivo: Individuare i timestamp (actionPeaks: List<Long>) dei movimenti esplosivi verticali (salti, snatch, jerk).) Tj
+0 -14 Td
+(- Campionamento Scalato: Estrae numFrames = 10 fotogrammi equidistanti (intervalMs = durationMs / 11) scalati a) Tj
+0 -13 Td
+(  480x270 pixel (OPTION_CLOSEST), riducendo del 95% la RAM e triplicando la velocita' rispetto al 4K.) Tj
+0 -14 Td
+(- Inferenza ML Kit Pose Detection (SINGLE_IMAGE_MODE): Per ogni frame calcola la quota verticale media Y:) Tj
+/F3 8.8 Tf
+1 1 1 rg
+0 -14 Td
+(  Primario (Anche 23, 24):   avgY = (LEFT_HIP.position.y + RIGHT_HIP.position.y) / 2f) Tj
+0 -12 Td
+(  Fallback (Spalle 11, 12):  avgY = (LEFT_SHOULDER.position.y + RIGHT_SHOULDER.position.y) / 2f) Tj
+/F1 9.2 Tf
+0.922 0.878 0.851 rg
+0 -14 Td
+(- Isolamento dei Picchi Esplosivi (Soglia Adattiva 1.5x + Soglia Minima Anti-Rumore 8.0 px su 270px):) Tj
+/F3 8.8 Tf
+1 1 1 rg
+0 -14 Td
+(  displacement[i] = |avgY[i] - avgY[i-1]|;   avgDisplacement = SUM(displacement) / (frameData.size - 1)) Tj
+0 -12 Td
+(  threshold = avgDisplacement * 1.5f;        PEAK SE: (displacement[i] > threshold && displacement[i] > 8.0f)) Tj
+ET
+
+BT
+/F3 8.5 Tf
+0.541 0.510 0.478 rg
+32 28 Td
+(ORANGE-BEAT v1.0.0  |  SNAPSHOT TECNICO & MANUALE UTENTE  |  PAGINA 7 DI 9) Tj
+ET
+endstream
+endobj
+
+24 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources 7 0 R /Contents 25 0 R >>
+endobj
+
+25 0 obj
+<< /Length 5960 >>
+stream
+% PAGE 8: ALGORITHMS PART 2 - AIDIRECTOR.KT (5 MUSICAL SECTIONS, BEAT ANCHORING & SPEED RAMPING)
+0.059 0.055 0.051 rg
+0 0 595 842 re f
+0.988 0.376 0.000 rg
+0 830 595 12 re f
+
+BT
+/F2 16 Tf
+1 1 1 rg
+32 798 Td
+(MOTORE DI REGIA DETERMINISTICO: AiDirector.kt) Tj
+/F1 10 Tf
+0.780 0.749 0.718 rg
+0 -16 Td
+(Suddivisione Timeline in 5 Sezioni Emotive, Ancoraggio ai Beat, Anti-Ripetizione e Speed Ramping) Tj
+ET
+
+% =========================================================================
+% VISUAL TIMELINE DIAGRAM OF THE 5 MUSICAL SECTIONS (0% .. 100%)
+% =========================================================================
+0.110 0.106 0.098 rg
+0.227 0.212 0.200 RG
+1 w
+32 612 531 154 re B
+
+BT
+/F2 10.5 Tf
+1.000 0.718 0.302 rg
+46 746 Td
+(ARCHITETTURA DELLA TIMELINE MUSICALE (MusicSection) & PATTERN RITMICI (Beat Jump):) Tj
+ET
+
+% 5 Timeline Blocks
+% 1. INTRO (0-15%)
+0.173 0.161 0.149 rg 0.35 0.32 0.30 RG 1 w
+46 668 75 64 re B
+% 2. BUILDUP (15-35%)
+0.239 0.140 0.040 rg
+121 668 100 64 re B
+% 3. DROP (35-60%)
+0.988 0.376 0.000 rg
+221 668 125 64 re B
+% 4. BREAKDOWN (60-75%)
+0.173 0.161 0.149 rg
+346 668 75 64 re B
+% 5. CLIMAX (75-100%)
+0.827 0.184 0.184 rg
+421 668 125 64 re B
+
+BT
+/F2 8.5 Tf
+1 1 1 rg
+56 714 Td (INTRO) Tj
+76 0 Td (BUILDUP) Tj
+96 0 Td (DROP (HIGH)) Tj
+112 0 Td (BREAKDOWN) Tj
+94 0 Td (CLIMAX (HIGH)) Tj
+
+/F3 7.5 Tf
+0.922 0.878 0.851 rg
+-384 -15 Td (0% - 15%) Tj
+78 0 Td (15% - 35%) Tj
+104 0 Td (35% - 60%) Tj
+122 0 Td (60% - 75%) Tj
+82 0 Td (75% - 100%) Tj
+
+/F3 7 Tf
+1.000 0.718 0.302 rg
+-386 -14 Td ([8,4,8,4]) Tj
+76 0 Td ([4,2,2,1,4..]) Tj
+1 1 1 rg
+104 0 Td ([1,1,1,1,2..]) Tj
+1.000 0.718 0.302 rg
+122 0 Td ([8, 4, 8]) Tj
+1 1 1 rg
+82 0 Td ([1,1,2,1,1..]) Tj
+
+/F1 7 Tf
+0.780 0.749 0.718 rg
+-384 -13 Td (Ken Burns Zoom) Tj
+76 0 Td (Accelerazione) Tj
+1 1 1 rg
+104 0 Td (Peaks+Ramp+Flash) Tj
+0.780 0.749 0.718 rg
+122 0 Td (Ken Burns Zoom) Tj
+1 1 1 rg
+82 0 Td (Peaks+Ramp+Flash) Tj
+ET
+
+BT
+/F1 8.8 Tf
+0.922 0.878 0.851 rg
+46 644 Td
+(- Sincronizzazione Anti-Desync: Ad ogni iterazione, while (beatTimestamps[beatIdx] <= currentTimelineMs) beatIdx++) Tj
+0 -13 Td
+(  allinea il cursore dei battiti al tempo reale della timeline prima di calcolare nextBeatIdx = beatIdx + beatJump - 1.) Tj
+0 -13 Td
+(- Partizionamento Energetico dei Candidati: I video vengono ordinati per motionScore crescente; in DROP e CLIMAX) Tj
+0 -12 Td
+(  vengono scelti dalla meta' superiore (takeLast), mentre in INTRO, BUILDUP e BREAKDOWN dalla meta' inferiore (take).) Tj
+ET
+
+% =========================================================================
+% ALGORITHMIC RULES OF AIDIRECTOR.KT
+% =========================================================================
+0.110 0.106 0.098 rg
+0.227 0.212 0.200 RG
+32 56 531 542 re B
+
+0.988 0.376 0.000 rg
+32 572 531 26 re f
+BT
+/F2 11.5 Tf
+1 1 1 rg
+46 581 Td
+(REGOLE MATEMATICHE DI SELEZIONE CLIP, SECURITY CLAMP & SPEED RAMPING) Tj
+ET
+
+BT
+/F2 10 Tf
+1.000 0.718 0.302 rg
+46 550 Td
+(1. Anti-Ripetizione Consecutiva & Bilanciamento Globale (videoAppearanceCount):) Tj
+/F1 9.2 Tf
+0.922 0.878 0.851 rg
+0 -14 Td
+(- Se videos.size > 1, l'indice dell'ultimo video utilizzato (lastUsedVideoIdx) viene rimosso dai candidati.) Tj
+0 -13 Td
+(- Tra i candidati della fascia energetica richiesta viene filtrato il sottoinsieme con il minimo valore di) Tj
+0 -13 Td
+(  videoAppearanceCount[idx], garantendo una rotazione equa di tutte le clip selezionate dall'utente.) Tj
+
+/F2 10 Tf
+1.000 0.718 0.302 rg
+0 -18 Td
+(2. Security Clamp con Ancoraggio sul Battito & Anti-Glitch Finale (< 400 ms):) Tj
+/F1 9.2 Tf
+0.922 0.878 0.851 rg
+0 -14 Td
+(- Se la durata richiesta dal pattern ritmico (clipDuration) supera la durata del video sorgente (maxDuration),) Tj
+0 -13 Td
+(  l'algoritmo arretra lungo i beat (fittedBeatIdx--) finche' (beatTimestamps[fittedBeatIdx] - currentTimelineMs)) Tj
+0 -13 Td
+(  rientra in [400ms, maxDuration], evitando tagli troncati fuori tempo a meta' battuta.) Tj
+0 -13 Td
+(- Anti-Glitch Finale: Se a fine timeline resterebbe un avanzo remainderMs in 1..399 ms, esso viene assorbito) Tj
+0 -13 Td
+(  nella clip corrente (clipDuration += remainderMs) per evitare micro-clip finali di pochi fotogrammi.) Tj
+
+/F2 10 Tf
+1.000 0.718 0.302 rg
+0 -18 Td
+(3. Ricerca Monte Carlo Anti-Sovrapposizione (usedSegmentsByVideo):) Tj
+/F1 9.2 Tf
+0.922 0.878 0.851 rg
+0 -14 Td
+(- Per ogni video viene memorizzata la lista di intervalli LongRange gia' usati nella timeline.) Tj
+0 -13 Td
+(- Nelle sezioni normali (o quando non ci sono actionPeaks liberi), cerca nell'intervallo sicuro [20%..80%]) Tj
+0 -13 Td
+(  del video eseguendo 10 campionamenti casuali e scegliendo il candidato con sovrapposizione minima (0 ms).) Tj
+
+/F2 10 Tf
+1.000 0.718 0.302 rg
+0 -18 Td
+(4. Speed Ramping Dinamico a 3 Stadi (2.0x -> 0.4x -> 2.0x) Centrato sul Picco d'Azione:) Tj
+/F1 9.2 Tf
+0.922 0.878 0.851 rg
+0 -14 Td
+(- Condizioni di attivazione: Sezione DROP o CLIMAX, unusedPeaks non vuoto, almeno 4 beat rimanenti,) Tj
+0 -13 Td
+(  probabilita' 75% (Math.random() < 0.75), rampClipDuration >= 1500 ms e sorgente >= 1.2x rampClipDuration.) Tj
+0 -13 Td
+(- Suddivisione Matematica del Taglio in 3 Oggetti JSON consecutivi nell'EDL:) Tj
+/F3 8.8 Tf
+1 1 1 rg
+0 -14 Td
+(  slowTimelineMs = 0.5 * clipDuration;   slowVideoMs = 0.4 * slowTimelineMs  (consuma 0.20 * clipDuration)) Tj
+0 -12 Td
+(  fastTimelineMs = 0.5 * clipDuration;   fastVideoMs = 2.0 * fastTimelineMs  (consuma 1.00 * clipDuration)) Tj
+0 -12 Td
+(  totalSourceMs  = slowVideoMs + fastVideoMs = 1.20 * clipDuration (centrato su peakMs)) Tj
+0 -13 Td
+(  [ Clip 1: speed = 2.0x (Ingresso veloce: halfFastVideoMs)                   ]) Tj
+0 -12 Td
+(  [ Clip 2: speed = 0.4x (Epic Slow-Motion sul picco atletico: slowVideoMs)   ]) Tj
+0 -12 Td
+(  [ Clip 3: speed = 2.0x (Uscita veloce sul battito successivo: halfFastVideoMs) ]) Tj
+ET
+
+BT
+/F3 8.5 Tf
+0.541 0.510 0.478 rg
+32 28 Td
+(ORANGE-BEAT v1.0.0  |  SNAPSHOT TECNICO & MANUALE UTENTE  |  PAGINA 8 DI 9) Tj
+ET
+endstream
+endobj
+
+26 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources 7 0 R /Contents 27 0 R >>
+endobj
+
+27 0 obj
+<< /Length 6280 >>
+stream
+% PAGE 9: MEDIA3 TRANSFORMER PIPELINE, GLSL SHADERS, AUDIO PROCESSOR & ERROR LOGGER
+0.059 0.055 0.051 rg
+0 0 595 842 re f
+0.988 0.376 0.000 rg
+0 830 595 12 re f
+
+BT
+/F2 16 Tf
+1 1 1 rg
+32 798 Td
+(PIPELINE DI RENDERING MEDIA3, SHADERS GLSL & AUDIO) Tj
+/F1 10 Tf
+0.780 0.749 0.718 rg
+0 -16 Td
+(Catena VideoEditor.kt, KenBurnsEffect.kt, VfxEffect.kt, VolumeAudioProcessor.kt ed ErrorLogger.kt) Tj
+ET
+
+% =========================================================================
+% DIAGRAM OF MEDIA3 EFFECT PIPELINE (Presentation First!)
+% =========================================================================
+0.110 0.106 0.098 rg
+0.227 0.212 0.200 RG
+1 w
+32 652 531 114 re B
+
+BT
+/F2 10 Tf
+1.000 0.718 0.302 rg
+46 748 Td
+(CATENA ORDINATA DEGLI EFFETTI PER-FRAME IN VideoEditor.kt (EditedMediaItem):) Tj
+ET
+
+% 5 Pipeline Boxes
+0.988 0.376 0.000 rg 46 686 96 48 re f
+0.173 0.161 0.149 rg 0.35 0.32 0.30 RG 1 w 150 686 96 48 re B
+254 686 96 48 re B
+358 686 96 48 re B
+462 686 88 48 re B
+
+BT
+/F2 8 Tf
+1 1 1 rg
+52 718 Td (1. Presentation) Tj
+50 0 Td () Tj
+104 0 Td (2. RgbMatrix) Tj
+104 0 Td (3. SpeedChange) Tj
+104 0 Td (4. KenBurns) Tj
+100 0 Td (5. VfxEffect) Tj
+
+/F3 7 Tf
+1 1 1 rg
+-456 -13 Td (1080x1920 (9:16)) Tj
+0.922 0.878 0.851 rg
+104 0 Td (ColorPreset 4x4) Tj
+104 0 Td (2.0x / 0.4x) Tj
+104 0 Td (Zoom 1.0->1.15x) Tj
+100 0 Td (OpenGL ES 2.0) Tj
+
+1 1 1 rg
+-412 -11 Td (1920x1080 (16:9)) Tj
+0.780 0.749 0.718 rg
+104 0 Td (+ Flash 120ms) Tj
+104 0 Td (Solo se != 1.0f) Tj
+104 0 Td (INTRO/BREAKDOWN) Tj
+100 0 Td (OldFilm/Glitch) Tj
+ET
+
+BT
+/F1 8.5 Tf
+0.922 0.878 0.851 rg
+46 664 Td
+(* CRITICO: Presentation.createForWidthAndHeight(width, height, LAYOUT_SCALE_TO_FIT_WITH_CROP) e' SEMPRE il primo) Tj
+ET
+
+% =========================================================================
+% TECHNICAL DETAILS OF RENDERING COMPONENTS
+% =========================================================================
+0.110 0.106 0.098 rg
+0.227 0.212 0.200 RG
+32 56 531 582 re B
+
+0.988 0.376 0.000 rg
+32 612 531 26 re f
+BT
+/F2 11.5 Tf
+1 1 1 rg
+46 621 Td
+(SPECIFICHE TECNICHE DI BASSO LIVELLO DELLA CATENA DI ESPORTAZIONE) Tj
+ET
+
+BT
+/F2 10 Tf
+1.000 0.718 0.302 rg
+46 590 Td
+(1. Bypass RgbMatrix & Effetto Stroboscopico FLASH [VideoEditor.kt Linee 85-111]:) Tj
+/F1 9 Tf
+0.922 0.878 0.851 rg
+0 -14 Td
+(- Bypass Totale: needsColorMatrix = (colorPreset != ColorPreset.NONE || useFlash). Se falso, RgbMatrix non viene) Tj
+0 -13 Td
+(  aggiunta alla pipeline, preservando i colori nativi della fotocamera con zero overhead GPU.) Tj
+0 -13 Td
+(- Calcolo Tempo Relativo Clip: In una EditedMediaItemSequence i presentationTimeUs sono cumulativi; ogni effetto) Tj
+0 -13 Td
+(  memorizza if (firstPtsUs < 0L) firstPtsUs = presentationTimeUs e calcola relativeUs = presentationTimeUs - firstPtsUs.) Tj
+0 -13 Td
+(- Matematica Flash (120 ms = 120_000 us nei tagli DROP e CLIMAX quando VfxPreset.FLASH e' selezionato):) Tj
+/F3 8.5 Tf
+1 1 1 rg
+0 -13 Td
+(  intensity = 1.0f - (relativeUs.toFloat() / 120_000f);   boost = 1.0f + (intensity * 1.8f)  [da 2.8x a 1.0x]) Tj
+0 -12 Td
+(  Per idx in 0..15: boostedMatrix[idx] = if (idx % 4 < 3) baseMatrixArray[idx] * boost else baseMatrixArray[idx]) Tj
+
+/F2 10 Tf
+1.000 0.718 0.302 rg
+0 -18 Td
+(2. Zoom Cinematografico a Zero Allocazioni [KenBurnsEffect.kt]:) Tj
+/F1 9 Tf
+0.922 0.878 0.851 rg
+0 -14 Td
+(- Applicato nelle sezioni calme (INTRO e BREAKDOWN). Pre-alloca private val matrix = Matrix() fuori da getMatrix().) Tj
+0 -13 Td
+(- Ad ogni frame invoca matrix.reset() e applica scale = 1.0f + (0.15f * progress) intorno a (0,0) in coordinate NDC.) Tj
+0 -13 Td
+(- Poiche' scale >= 1.0f sempre, copre l'intero viewport senza mai generare bordi neri ne' in 9:16 ne' in 16:9.) Tj
+
+/F2 10 Tf
+1.000 0.718 0.302 rg
+0 -18 Td
+(3. Shaders OpenGL ES 2.0 Custom [VfxEffect.kt, old_film_shader.glsl, tv_glitch_shader.glsl]:) Tj
+/F1 9 Tf
+0.922 0.878 0.851 rg
+0 -14 Td
+(- VfxShaderProgram estende BaseGlShaderProgram(useHdr, 1); configure(w, h) restituisce Size(inputWidth, inputHeight),) Tj
+0 -13 Td
+(  preservando le dimensioni 1080x1920 o 1920x1080 passate da Presentation.) Tj
+0 -13 Td
+(- Uniform temporale relativo: uTime = (presentationTimeUs - firstPtsUs) / 1_000_000f (evita overflow di sin() in mediump).) Tj
+0 -13 Td
+(- old_film_shader.glsl: Film Grain ((rand - 0.5) * 0.15), Vignette smoothstep(0.85, 0.35, dist), Scratches (> 0.98 -> +0.4).) Tj
+0 -13 Td
+(- tv_glitch_shader.glsl: Barrel Distortion CRT (amt = 0.25), Jitter orizzontale su 20 blocchi verticali (15 Hz),) Tj
+0 -13 Td
+(  Aberrazione Cromatica RGB Split (0.004 base + 0.010 glitch), Scanlines morbide (max -1.5% luminosita') e Vignetta.) Tj
+
+/F2 10 Tf
+1.000 0.718 0.302 rg
+0 -18 Td
+(4. Processore Audio PCM 16-bit & Fade-Out Finale [VolumeAudioProcessor.kt]:) Tj
+/F1 9 Tf
+0.922 0.878 0.851 rg
+0 -14 Td
+(- Estende BaseAudioProcessor; in onConfigure() verifica esplicitamente inputAudioFormat.encoding == C.ENCODING_PCM_16BIT.) Tj
+0 -13 Td
+(- Opera a guadagno unitario (volume = 1.0f) per prevenire hard clipping, applicando negli ultimi 1500 ms un fade-out) Tj
+0 -13 Td
+(  lineare campione per campione: fade = 1f - ((posMs - fadeOutStartMs) / 1500f); sampleOut = coerceIn(Short.MIN..MAX).) Tj
+
+/F2 10 Tf
+1.000 0.718 0.302 rg
+0 -18 Td
+(5. Diagnostica Persistente Scoped Storage [ErrorLogger.kt]:) Tj
+/F1 9 Tf
+0.922 0.878 0.851 rg
+0 -14 Td
+(- Salva eventuali eccezioni e il JSON EDL in Android/data/com.example.crossreel/files/Documents/orangebeat_errors.txt.) Tj
+ET
+
+BT
+/F3 8.5 Tf
+0.541 0.510 0.478 rg
+32 28 Td
+(ORANGE-BEAT v1.0.0  |  SNAPSHOT TECNICO & MANUALE UTENTE  |  PAGINA 9 DI 9) Tj
+ET
+endstream
+endobj
+
+xref
+0 28
+0000000000 65535 f 
+0000000079 00000 n 
+0000000128 00000 n 
+0000000235 00000 n 
+0000000319 00000 n 
+0000000408 00000 n 
+0000000495 00000 n 
+0000000580 00000 n 
+0000000679 00000 n 
+0000000000 65535 f 
+0000001262 00000 n 
+0000001368 00000 n 
+0000006401 00000 n 
+0000006507 00000 n 
+0000012210 00000 n 
+0000012316 00000 n 
+0000018489 00000 n 
+0000018595 00000 n 
+0000024488 00000 n 
+0000024594 00000 n 
+0000030267 00000 n 
+0000030373 00000 n 
+0000036006 00000 n 
+0000036112 00000 n 
+0000042315 00000 n 
+0000042421 00000 n 
+0000048434 00000 n 
+0000048540 00000 n 
+trailer
+<< /Size 28 /Root 1 0 R >>
+startxref
+54873
+%%EOF
