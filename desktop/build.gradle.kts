@@ -104,6 +104,7 @@ compose.desktop {
                 debPackageVersion = numericVersion
                 menuGroup = "AudioVideo"
                 appCategory = "Video"
+                iconFile.set(project.file("src/main/resources/icon.png"))
             }
 
             windows {
@@ -114,6 +115,7 @@ compose.desktop {
                 shortcut = true
                 dirChooser = true
                 perUserInstall = true
+                iconFile.set(project.file("src/main/resources/icon.ico"))
             }
         }
     }

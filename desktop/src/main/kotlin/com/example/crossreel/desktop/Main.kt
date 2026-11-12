@@ -19,6 +19,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.painter.BitmapPainter
+import androidx.compose.ui.graphics.toComposeImageBitmap
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
@@ -45,9 +47,19 @@ import javax.swing.filechooser.FileNameExtensionFilter
 import kotlin.system.exitProcess
 
 fun main() = application {
+    val appIcon = remember {
+        runCatching {
+            DesktopPaths::class.java.classLoader.getResourceAsStream("icon.png")?.use { stream ->
+                val skiaImage = org.jetbrains.skia.Image.makeFromEncoded(stream.readBytes())
+                BitmapPainter(skiaImage.toComposeImageBitmap())
+            }
+        }.getOrNull()
+    }
+
     Window(
         onCloseRequest = ::exitApplication,
         title = "Orange-Beat ${DesktopBuildConfig.VERSION_NAME} — Studio Desktop",
+        icon = appIcon,
         state = rememberWindowState(width = 960.dp, height = 860.dp)
     ) {
         OrangeBeatDesktopTheme {
