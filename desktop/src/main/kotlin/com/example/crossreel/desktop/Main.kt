@@ -3,6 +3,7 @@ package com.example.crossreel.desktop
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -87,6 +88,14 @@ fun main() = application {
 
 @Composable
 private fun DesktopSplashScreen() {
+    val splashBitmap = remember {
+        runCatching {
+            DesktopPaths::class.java.classLoader.getResourceAsStream("splash_logo.png")?.use { stream ->
+                org.jetbrains.skia.Image.makeFromEncoded(stream.readBytes()).toComposeImageBitmap()
+            }
+        }.getOrNull()
+    }
+
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -94,14 +103,22 @@ private fun DesktopSplashScreen() {
         contentAlignment = Alignment.Center
     ) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
+            if (splashBitmap != null) {
+                Image(
+                    bitmap = splashBitmap,
+                    contentDescription = "OrangeBeat Logo",
+                    modifier = Modifier.size(220.dp)
+                )
+                Spacer(modifier = Modifier.height(20.dp))
+            }
             Text(
                 text = buildAnnotatedString {
-                    withStyle(SpanStyle(color = Color.White)) { append("ORANGE ") }
+                    withStyle(SpanStyle(color = Color.White)) { append("ORANGE") }
                     withStyle(SpanStyle(color = FlameOrange)) { append("BEAT") }
                 },
                 fontWeight = FontWeight.Black,
-                fontSize = 32.sp,
-                letterSpacing = 5.sp
+                fontSize = 26.sp,
+                letterSpacing = 4.sp
             )
             Spacer(modifier = Modifier.height(10.dp))
             Text(
