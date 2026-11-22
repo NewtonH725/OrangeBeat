@@ -52,12 +52,19 @@ jobs:
           KEYSTORE_B64: ${{ secrets.ANDROID_DEBUG_KEYSTORE_B64 }}
         run: |
           if [ -n "$KEYSTORE_B64" ]; then
-            mkdir -p "$HOME/.android"
-            printf '%s' "$KEYSTORE_B64" | base64 -d > "$HOME/.android/debug.keystore"
+            printf '%s' "$KEYSTORE_B64" | base64 -d > /tmp/orangebeat-debug.keystore
+            echo "ANDROID_DEBUG_KEYSTORE_PATH=/tmp/orangebeat-debug.keystore" >> "$GITHUB_ENV"
           fi
 
       - name: Build Android APK
         run: ./gradlew :app:assembleDebug --no-daemon
+
+      - name: Verify APK signature matches official keystore
+        run: |
+          APK_PATH=$(find app/build/outputs/apk/debug -name "*.apk" | head -n 1)
+          APKSIGNER=$(find "$ANDROID_HOME/build-tools" -name apksigner | sort -V | tail -n 1)
+          "$APKSIGNER" verify --print-certs "$APK_PATH" | tee /tmp/apk_certs.txt
+          grep -qi "4523cf92aabe4cacb2b0ddae4ee5d9cbc5fb58be6ab9a60450a2375240926d0d" /tmp/apk_certs.txt
 
       - name: Build Ubuntu .deb package
         run: ./gradlew :desktop:packageDeb --no-daemon

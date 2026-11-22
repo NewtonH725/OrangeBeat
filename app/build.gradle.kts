@@ -13,20 +13,29 @@ android {
     // - Z (versionPatch): Incrementa (+1) solo per bug fix, correzioni e upgrade minori.
     val versionMajor = 3 // Incrementa SOLO per introduzione di nuove funzionalità (v3.0.0 Desktop Ubuntu & Windows + Multi-Platform OTA)
     val versionMinor = 0 // Incrementa per upgrade sostanziosi e più importanti
-    val versionPatch = 2 // Incrementa per bug fix e upgrade minori (v3.0.2 Firma APK unificata per OTA Android)
+    val versionPatch = 3 // Incrementa per bug fix e upgrade minori (v3.0.3 Fix firma keystore esplicita in CI)
 
     defaultConfig {
         applicationId = "com.example.crossreel"
         minSdk = 35
         targetSdk = 37
-        versionCode = versionMajor * 10000 + versionMinor * 100 + versionPatch // 30002 per v3.0.2
-        versionName = "v$versionMajor.$versionMinor.$versionPatch" // "v3.0.2"
+        versionCode = versionMajor * 10000 + versionMinor * 100 + versionPatch // 30003 per v3.0.3
+        versionName = "v$versionMajor.$versionMinor.$versionPatch" // "v3.0.3"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     base {
         archivesName.set("OrangeBeat-v$versionMajor.$versionMinor.$versionPatch-android")
+    }
+
+    signingConfigs {
+        getByName("debug") {
+            val customKeystore = System.getenv("ANDROID_DEBUG_KEYSTORE_PATH")
+            if (!customKeystore.isNullOrBlank() && file(customKeystore).exists()) {
+                storeFile = file(customKeystore)
+            }
+        }
     }
 
     buildTypes {
