@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://github.com/NewtonH725/OrangeBeat/releases/latest">
-    <img src="https://img.shields.io/badge/Release-v3.0.3-FF5E00?style=for-the-badge&logo=github&logoColor=white" alt="Latest Release" />
+    <img src="https://img.shields.io/badge/Release-v3.1.0-FF5E00?style=for-the-badge&logo=github&logoColor=white" alt="Latest Release" />
   </a>
   <img src="https://img.shields.io/badge/Android-SDK%2035%20--%2037-10B981?style=for-the-badge&logo=android&logoColor=white" alt="Target Android" />
   <img src="https://img.shields.io/badge/Ubuntu-Linux%20x64-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" alt="Target Ubuntu" />
@@ -22,7 +22,7 @@
 
 ---
 
-## 📥 Risorse & Download Rapido (`v3.0.3`)
+## 📥 Risorse & Download Rapido (`v3.1.0`)
 
 Tutti i pacchetti eseguibili contengono il numero di versione nel nome e supportano l'**aggiornamento automatico OTA** da GitHub Releases:
 

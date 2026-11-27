@@ -383,11 +383,11 @@ private fun DesktopMainScreen(onRequestExit: () -> Unit) {
             modifier = Modifier.fillMaxWidth()
         ) {
             Column(modifier = Modifier.padding(18.dp)) {
-                Text("DURATA REEL", color = FlameOrange, fontWeight = FontWeight.Bold, fontSize = 12.sp, letterSpacing = 1.sp)
-                Spacer(modifier = Modifier.height(8.dp))
                 DesktopMixerKnobWithVuMeter(
                     selectedDuration = selectedDuration,
-                    onDurationChange = { if (!isProcessing) selectedDuration = it }
+                    onDurationChange = { if (!isProcessing) selectedDuration = it },
+                    range = 5..60,
+                    enabled = !isProcessing
                 )
             }
         }

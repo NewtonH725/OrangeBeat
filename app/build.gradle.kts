@@ -12,15 +12,15 @@ android {
     // - Y (versionMinor): Incrementa (+1, azzerando Z) per upgrade sostanziosi e miglioramenti importanti.
     // - Z (versionPatch): Incrementa (+1) solo per bug fix, correzioni e upgrade minori.
     val versionMajor = 3 // Incrementa SOLO per introduzione di nuove funzionalità (v3.0.0 Desktop Ubuntu & Windows + Multi-Platform OTA)
-    val versionMinor = 0 // Incrementa per upgrade sostanziosi e più importanti
-    val versionPatch = 3 // Incrementa per bug fix e upgrade minori (v3.0.3 Fix firma keystore esplicita in CI)
+    val versionMinor = 1 // Incrementa per upgrade sostanziosi e più importanti (v3.1.0 Nuovo VU Meter Desktop & fix slider durata)
+    val versionPatch = 0 // Incrementa per bug fix e upgrade minori
 
     defaultConfig {
         applicationId = "com.example.crossreel"
         minSdk = 35
         targetSdk = 37
-        versionCode = versionMajor * 10000 + versionMinor * 100 + versionPatch // 30003 per v3.0.3
-        versionName = "v$versionMajor.$versionMinor.$versionPatch" // "v3.0.3"
+        versionCode = versionMajor * 10000 + versionMinor * 100 + versionPatch // 30100 per v3.1.0
+        versionName = "v$versionMajor.$versionMinor.$versionPatch" // "v3.1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
